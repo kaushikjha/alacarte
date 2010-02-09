@@ -1,0 +1,9 @@
+<h1>Menus</h1>
+
+<% if @menus.empty? %>
+  Start by adding a menu.
+<% end %>
+
+<% @menus.each do |menu| %>
+  <%= menu.name %><br />
+<% end %>

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :menus
+
   map.with_options(:controller => 'pages', :action => 'show') do |pages|
     pages.connect '/', :id => 'home'
     pages.connect '/pages/:id'
@@ -6,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :user_session
   map.resource :account, :controller => "users"
-  map.resources :users
+  map.resources :users, :has_many => "menus"
 
   map.login '/login', :controller => "user_sessions", :action => :new
   map.logout '/logout', :controller => "user_sessions", :action => :destroy

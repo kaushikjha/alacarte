@@ -1,9 +1,13 @@
 class PagesController < ApplicationController
   def show
-    if %w(home).include?(params[:id])
-      render "pages/show/#{params[:id]}"
+    if params[:id] == "home" && signed_in?
+      redirect_to menus_path
     else
-      render :status => 404
+      if %w(home).include?(params[:id])
+        render "pages/show/#{params[:id]}"
+      else
+        render :status => 404
+      end
     end
   end
 end
