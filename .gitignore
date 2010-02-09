@@ -1,0 +1,7 @@
+log/*.log
+tmp/**/*
+coverage/*
+coverage.data
+db/*.sqlite3
+.DS_Store
+test/*
