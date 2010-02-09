@@ -2,21 +2,44 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
-    <%= stylesheet_link_tag 'application' %>
+    <title><%= h(yield(:title) || "Alacarte") %></title>
+    <%= stylesheet_link_tag 'reset', 'application' %>
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
-      <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%- end -%>
-      
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
-      
-      <%= yield %>
+    <div id="header">
+      <div id="header_stuff">
+        <div id="green_bar"></div>
+        <img src="/images/logo.png" alt="" id="logo" />
+        <!--<div id="tabs">
+          <a href=""><img src="/images/tab_home.jpg" alt="home" /></a>
+          <a href=""><img src="/images/tab_menus.jpg" alt="home" /></a>
+          <a href=""><img src="/images/tab_help.jpg" alt="home" /></a>
+        </div>-->
+      </div>
     </div>
+    <div id="container">
+      <div id="inner_container">
+        <div id="nav">
+          <div id="nav_top_main"></div>
+          <div id="nav_middle">
+          </div>
+          <div id="nav_bottom"></div>
+        </div>
+        <div id="edit_section">
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
+      
+          <%- if show_title? -%>
+            <h1><%=h yield(:title) %></h1>
+          <%- end -%>
+      
+        <%= yield %>
+        </div><!--end edit section-->
+      </div><!--end inner container-->
+      <div class="clear"></div>
+    </div><!--end container-->
+    <div id="container_bottom"></div>
   </body>
 </html>
