@@ -1,13 +1,17 @@
-<p>
-  <b>User:</b>
-  <%=h @menu.user_id %>
-</p>
+<h1>Menu: <%= @menu.name %></h1>
 
-<p>
-  <b>Name:</b>
-  <%=h @menu.name %>
-</p>
+<% if @menu.categories.empty? %>
+  Now, let's add a category.
+<% else %>
+  <% @menu.categories.each do |category| %>
+    <h2><%= category.name %></h2>
+  <% end %>
+<% end %>
 
+<% form_for [@menu, Category.new] do |f| -%>
+  <p>
+    <%= f.text_field :name %><%= f.submit "Add" %>
+  </p>
+<% end -%>
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
 <%= link_to 'Back', menus_path %>

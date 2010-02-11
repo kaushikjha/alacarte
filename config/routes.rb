@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :menus
+  map.resources :menus, :has_many => :categories
 
   map.with_options(:controller => 'pages', :action => 'show') do |pages|
     pages.connect '/', :id => 'home'

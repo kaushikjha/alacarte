@@ -41,7 +41,8 @@ class MenusController < ApplicationController
   # POST /menus
   # POST /menus.xml
   def create
-    @menu = Menu.new(params[:menu])
+    @user = current_user
+    @menu = @user.menus.new(params[:menu])
 
     respond_to do |format|
       if @menu.save

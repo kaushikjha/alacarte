@@ -4,6 +4,8 @@
   Start by adding a menu.
 <% end %>
 
+<p><%= link_to "Add Menu", new_menu_path %></p>
+
 <% @menus.each do |menu| %>
-  <%= menu.name %><br />
+  <%= link_to menu.name, menu_path(menu) %><br />
 <% end %>
