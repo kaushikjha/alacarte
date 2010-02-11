@@ -1,0 +1,26 @@
+<h1>New item</h1>
+
+<% form_for([@category, @item]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <% f.fields_for :prices do |builder| %>
+    <p>
+      <%= builder.label :description %>
+      <%= builder.text_field :description %>
+    </p>
+    <p>
+      <%= builder.label :price %>
+      <%= builder.text_field :price %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.submit 'Add' %>
+  </p>
+<% end %>

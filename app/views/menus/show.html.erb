@@ -5,6 +5,15 @@
 <% else %>
   <% @menu.categories.each do |category| %>
     <h2><%= category.name %></h2>
+    <% category.items.each do |item| %>
+      <p>
+        <%= item.name %><br />
+        <% item.prices.each do |price| %>
+          <%= price.description %>: <%= number_to_currency(price.price) %>
+        <% end %>
+      </p>
+    <% end %>
+    <p><%= link_to "add item to #{category.name}", new_category_item_path(category) %></p>
   <% end %>
 <% end %>
 

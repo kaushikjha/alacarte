@@ -1,0 +1,23 @@
+<p>
+  <b>User:</b>
+  <%=h @price.user_id %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%=h @price.item_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @price.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @price.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>

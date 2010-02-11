@@ -77,20 +77,6 @@ p {
 th, td {
   padding: 5px;
 }
-label {
-  clear: left;
-  float: left;
-  padding: 5px;
-  text-align: right;
-  width: 150px;
-}
-input {
-  margin: 5px;
-}
-textarea {
-  height: 150px;
-  width: 550px;
-}
 
 .center {
   margin: 0 auto;
