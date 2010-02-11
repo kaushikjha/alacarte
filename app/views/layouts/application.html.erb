@@ -4,7 +4,7 @@
   <head>
     <title><%= h(yield(:title) || "Alacarte") %></title>
     <%= stylesheet_link_tag 'reset', 'application' %>
-    <%= javascript 'jquery' %>
+    <%= javascript 'jquery', 'application' %>
     <%= yield(:head) %>
   </head>
   <body>
