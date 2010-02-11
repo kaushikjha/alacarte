@@ -31,7 +31,6 @@ Feature: Manage Menus
     And I have a menu called "First Menu"
     When I am on the homepage
     Then I should not see "Start by adding a menu"
-    And I should see "First Menu"
     When I follow "Add Menu"
     And I fill in "Name" with "First Menu"
     And I press "Create"

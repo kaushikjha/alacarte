@@ -1,6 +1,7 @@
 <p>
   <%= link_to item.name, edit_category_item_path(item.category, item) %><br />
   <% item.prices.each do |price| %>
-    <%= price.description %>: <%= number_to_currency(price.price) %>
+    <%= "#{price.description}: " unless price.description.blank? %> 
+    <%= number_to_currency(price.price) %>
   <% end %>
 </p>

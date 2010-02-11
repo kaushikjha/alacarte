@@ -8,7 +8,6 @@ Feature: Manage Items
     And I have a menu called "First Menu"
     And that menu has a category called "Appetizers"
     When I am on the homepage
-    And I follow "First Menu"
     And I follow "add item to Appetizers"
     And I fill in "Name" with "Chicken Fingers"
     And I fill in "Description" with "A lovely order of chicken fingers"
@@ -17,5 +16,6 @@ Feature: Manage Items
     And I press "Add"
     Then I should see "Appetizers"
     And I should see "Chicken Fingers"
-    And I should see "Normal Order: $6.95"
+    And I should see "Normal Order:"
+    And I should see "$6.95"
   
