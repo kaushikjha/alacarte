@@ -26,7 +26,9 @@ class ItemsController < ApplicationController
   def new
     @category = Category.find(params[:category_id])
     @item = Item.new
-    @item.prices.build
+    if @item.prices.length == 0
+      @item.prices.build
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -65,7 +67,7 @@ class ItemsController < ApplicationController
     respond_to do |format|
       if @item.update_attributes(params[:item])
         flash[:notice] = 'Item was successfully updated.'
-        format.html { redirect_to(@item) }
+        format.html { redirect_to(@item.category.menu) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

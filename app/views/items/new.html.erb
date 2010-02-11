@@ -1,19 +1,7 @@
 <h1>New item</h1>
 
 <% form_for([@category, @item]) do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <% f.fields_for :prices do |builder| %>
-    <%= render "shared/price_fields", :f => builder %>
-  <% end %>
-  <p><%= link_to_add_fields "Add Price", f, :prices %></p>
+  <%= render "form", :f => f %>
   <p>
     <%= f.submit 'Add' %>
   </p>
