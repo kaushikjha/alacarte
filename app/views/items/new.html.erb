@@ -11,14 +11,7 @@
     <%= f.text_area :description %>
   </p>
   <% f.fields_for :prices do |builder| %>
-    <p>
-      <%= builder.label :description %>
-      <%= builder.text_field :description %>
-    </p>
-    <p>
-      <%= builder.label :price %>
-      <%= builder.text_field :price %>
-    </p>
+    <%= render "shared/price_fields", :f => builder %>
   <% end %>
   <p>
     <%= f.submit 'Add' %>

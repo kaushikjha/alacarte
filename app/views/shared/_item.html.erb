@@ -1,0 +1,6 @@
+<p>
+  <%= item.name %><br />
+  <% item.prices.each do |price| %>
+    <%= price.description %>: <%= number_to_currency(price.price) %>
+  <% end %>
+</p>

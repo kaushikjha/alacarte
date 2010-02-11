@@ -1,0 +1,5 @@
+<h2><%= category.name %></h2>
+<% category.items.each do |item| %>
+  <%= render "shared/item", :item => item %>
+<% end %>
+<p><%= link_to "add item to #{category.name}", new_category_item_path(category) %></p>
