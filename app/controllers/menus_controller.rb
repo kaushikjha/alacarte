@@ -4,10 +4,14 @@ class MenusController < ApplicationController
   def index
     @user = current_user
     @menus = @user.menus
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @menus }
+    
+    if @menus.count == 1
+      redirect_to @menus.first
+    else
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @menus }
+      end
     end
   end
 
