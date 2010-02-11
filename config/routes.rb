@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :menus, :has_many => :categories
   map.resources :categories, :has_many => :items
-  map.resources :items
+  map.resources :items, :except => [:index, :show]
 
   map.with_options(:controller => 'pages', :action => 'show') do |pages|
     pages.connect '/', :id => 'home'
