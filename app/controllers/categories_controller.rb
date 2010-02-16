@@ -55,10 +55,11 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1.xml
   def destroy
     @category = Category.find(params[:id])
+    @menu = @category.menu
     @category.destroy
 
     respond_to do |format|
-      format.html { redirect_to(categories_url) }
+      format.html { redirect_to(@menu) }
       format.xml  { head :ok }
     end
   end

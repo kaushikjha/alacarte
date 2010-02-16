@@ -6,3 +6,5 @@
     <%= f.submit 'Update' %>
   </p>
 <% end %>
+
+<%= link_to "delete #{@item.name}", @item, :method => :delete, :confirm => "Are you sure you want to delete #{@item.name}?" %>

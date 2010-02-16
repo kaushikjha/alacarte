@@ -7,5 +7,5 @@
 <p><%= link_to "Add Menu", new_menu_path %></p>
 
 <% @menus.each do |menu| %>
-  <%= link_to menu.name, menu_path(menu) %><br />
+  <%= link_to menu.name, menu_path(menu) %> - <%= link_to "delete", menu, :method => :delete, :confirm => "Are you sure you want to delete #{menu.name}? (This will delete all categories and items in this menu.)" %><br />
 <% end %>
