@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title><%= h(yield(:title) || "Alacarte") %></title>
+    <title>Alacarte</title>
     <%= stylesheet_link_tag 'reset', 'application' %>
     <%= javascript 'jquery', 'application' %>
     <%= yield(:head) %>
@@ -28,12 +28,12 @@
           <div id="nav_bottom"></div>
         </div>
         <div id="edit_section">
+          <%- if show_title? -%>
+            <h1 id="title"><%= yield(:title) %></h1>
+          <%- end -%>
+          
           <%- flash.each do |name, msg| -%>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
-          <%- end -%>
-      
-          <%- if show_title? -%>
-            <h1><%=h yield(:title) %></h1>
           <%- end -%>
       
         <%= yield %>

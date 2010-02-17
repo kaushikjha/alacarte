@@ -1,6 +1,10 @@
-<h2><%= category.name %></h2>
-<p><%= link_to "delete #{category.name}", category_path(category), :method => :delete, :confirm => "Are you sure you want to delete #{category.name}?  (This will delete all items and prices in the category.)" %></p>
-<% category.items.each do |item| %>
-  <%= render "shared/item", :item => item %>
-<% end %>
-<p><%= link_to "add item to #{category.name}", new_category_item_path(category) %></p>
+<div class="category_sections">
+  <h2><%= category.name %></h2>
+  <p><%= link_to '<img src="/images/button_delete.jpg" alt="delete" />', category_path(category), :method => :delete, :confirm => "Are you sure you want to delete #{category.name}?  (This will delete all items and prices in the category.)" %></p>
+  <% category.items.each do |item| %>
+    <%= render "shared/item", :item => item %>
+  <% end %>
+  <p><%= link_to '<img src="/images/button_add_item.jpg" alt="delete" />', new_category_item_path(category) %></p>
+  
+<div class="clear"></div>
+</div>

@@ -1,5 +1,7 @@
-<h1>Menu: <%= @menu.name %></h1>
+<% title '<img src="/images/title_manage_menu.png" alt="" />' %>
 
+<h1 id="title_menu_name">Current Menu: <%= @menu.name %></h1>
+<div id="show_container">
 <% if @menu.categories.empty? %>
   Now, let's add a category.
 <% else %>
@@ -9,8 +11,9 @@
 <% end %>
 
 <% form_for [@menu, Category.new] do |f| -%>
-  <p>
-    <%= f.label :name, "New Category:" %><br />
-    <%= f.text_field :name %><%= f.submit "Add" %>
+  <h2><img src="/images/sub_title_new_category.jpg" alt="Want to Add a New Category?" /></h2>
+  <p id="show_new_category">
+    <%= f.text_field :name %><%= image_submit_tag"/images/button_add_category.jpg" %>
   </p>
 <% end -%>
+</div>

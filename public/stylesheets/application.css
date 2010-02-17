@@ -250,3 +250,49 @@ a:hover {
   padding-top: 13px;
   display: block;
 }
+
+
+/***************************************show***/
+
+#title_menu_name {
+  color: #96AF96;
+  font-size: 16px;
+  margin: 10px auto;
+  text-align: center;
+}
+.clear {
+  clear: both;
+}
+#show_new_category label{
+  display: block;
+  margin-bottom: 5px;
+}
+#show_new_category input {
+  float: left;
+}
+#show_new_category input[type=image] {
+}
+#category_name {
+  height: 26px;
+  width: 289px;
+  margin-top: 1px;
+}
+.category_sections {
+  background: #F7F9F7;
+  border: 1px solid #E2E9E2;
+  margin: 5px 0;
+  padding: 10px;
+}
+.category_sections p {
+  float: right;
+}
+#show_container {
+  margin-left: 15px;
+}
+#new_category h2{
+  text-align: center;
+}
+#new_category p{
+  margin: auto;
+  display: block;
+}
