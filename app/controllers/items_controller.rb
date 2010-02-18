@@ -24,6 +24,7 @@ class ItemsController < ApplicationController
   def create
     @category = Category.find(params[:category_id])
     @item = @category.items.new(params[:item])
+    @item.user_id = current_user.id
 
     respond_to do |format|
       if @item.save

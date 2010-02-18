@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   
   has_many :menus
   has_many :categories
+  has_many :items
+  has_many :prices
 end
