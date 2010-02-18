@@ -12,11 +12,13 @@
       <div id="header_stuff">
         <div id="green_bar"></div>
         <%= link_to image_tag("/images/logo.png", :id => "logo"), "/" %>
-        <div id="tabs">
-          <%= link_to image_tag("/images/tab_home.jpg", :alt => "home"), "/" %>
-          <%= link_to image_tag("/images/tab_menus.jpg", :alt => "Add Menu"), new_menu_path %>
-          <!-- <a href=""><img src="/images/tab_help.jpg" alt="home" /></a> -->
-        </div>
+        <% if signed_in? %>
+          <div id="tabs">
+            <%= link_to image_tag("/images/tab_home.jpg", :alt => "home"), "/" %>
+            <%= link_to image_tag("/images/tab_menus.jpg", :alt => "Add Menu"), new_menu_path %>
+            <!-- <a href=""><img src="/images/tab_help.jpg" alt="home" /></a> -->
+          </div>
+        <% end %>
       </div>
     </div>
     <div id="container">
