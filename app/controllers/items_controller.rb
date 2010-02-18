@@ -1,9 +1,10 @@
 class ItemsController < ApplicationController
+  load_and_authorize_resource
   # GET /items/new
   # GET /items/new.xml
   def new
     @category = Category.find(params[:category_id])
-    @item = Item.new
+    @item = @category.items.new
     if @item.prices.length == 0
       @item.prices.build
     end
