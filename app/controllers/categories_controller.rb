@@ -21,6 +21,7 @@ class CategoriesController < ApplicationController
   def create
     @menu = Menu.find(params[:menu_id])
     @category = @menu.categories.new(params[:category])
+    @category.user = current_user
 
     respond_to do |format|
       if @category.save
