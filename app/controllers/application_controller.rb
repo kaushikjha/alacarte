@@ -14,6 +14,11 @@ class ApplicationController < ActionController::Base
   def signed_in?
     ! current_user.nil?
   end
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Access denied."
+    redirect_to '/'
+  end
 
   private
   def current_user_session
