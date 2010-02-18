@@ -1,0 +1,17 @@
+<h1><%= @menu.name %></h1>
+
+<%- @menu.categories.each do |category| -%>
+  <h2><%= category.name %></h2>
+  <%= "<p class='category_description'>#{category.description}</p>" unless category.description.nil? %>
+  <% category.items.each do |item| %>
+    <div class="item">
+      <p><%= item.name %></p>
+      <%- item.prices.each do |price| -%>
+        <p>
+        <%= "#{price.description}: " unless price.description.blank? %> 
+        <%= number_to_currency(price.price) %>
+        </p>
+      <%- end -%>
+    </div>
+  <%- end -%>
+<%- end -%>

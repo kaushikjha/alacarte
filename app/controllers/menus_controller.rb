@@ -88,4 +88,9 @@ class MenusController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def print
+    @menu = Menu.find(params[:id])
+    render :layout => "print"
+  end
 end

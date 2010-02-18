@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :prices
 
-  map.resources :menus, :has_many => :categories
+  map.resources :menus, :has_many => :categories, :member => { :print => :get }
   map.resources :categories, :has_many => :items
   map.resources :items, :except => [:index, :show]
 
