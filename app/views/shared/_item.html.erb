@@ -3,5 +3,6 @@
   <% item.prices.each do |price| %>
     <%= "#{price.description}: " unless price.description.blank? %> 
     <%= number_to_currency(price.price) %>
+    <br />
   <% end %>
 </p>

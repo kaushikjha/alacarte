@@ -2,18 +2,18 @@
 
 <h1 id="title_menu_name">Current Menu: <%= @menu.name %></h1>
 <div id="show_container">
-<% if @menu.categories.empty? %>
-  Now, let's add a category.
-<% else %>
-  <% @menu.categories.each do |category| %>
-    <%= render "shared/category", :category => category %>
+  <% if @menu.categories.empty? %>
+    Now, let's add a category.
+  <% else %>
+    <% @menu.categories.each do |category| %>
+      <%= render "shared/category", :category => category %>
+    <% end %>
   <% end %>
-<% end %>
 
-<% form_for [@menu, Category.new] do |f| -%>
-  <h2><img src="/images/sub_title_new_category.jpg" alt="Want to Add a New Category?" /></h2>
-  <p id="show_new_category">
-    <%= f.text_field :name %><%= image_submit_tag"/images/button_add_category.jpg" %>
-  </p>
-<% end -%>
+  <% form_for [@menu, Category.new] do |f| -%>
+    <h2><img src="/images/sub_title_new_category.jpg" alt="Want to Add a New Category?" /></h2>
+    <p id="show_new_category">
+      <%= f.text_field :name %><%= image_submit_tag "/images/button_add_category.jpg", :id => "add_category" %>
+    </p>
+  <% end -%>
 </div>

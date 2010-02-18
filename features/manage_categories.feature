@@ -8,7 +8,7 @@ Feature: Manage Categories
     And I have a menu called "First Menu"
     When I am on the homepage
     And I fill in "category_name" with "Category 1"
-    And I press "Add"
+    And I press "add_category"
     Then I should see "Menu: First Menu"
     And I should see "Category 1"
   
