@@ -187,6 +187,11 @@ a:hover {
   width: 290px;
   height: 130px;
 }
+#nav_top {
+  background: url(/images/nav_top.jpg) no-repeat;
+  width: 290px;
+  height: 130px;
+}
 #nav_middle {
   background: url(/images/nav_middle.jpg) repeat-y;
   width: 290px;
