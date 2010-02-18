@@ -283,9 +283,13 @@ a:hover {
   margin: 5px 0;
   padding: 10px;
 }
-.category_sections p {
+.category_buttons {
   float: right;
 }
+.category_buttons p {
+  display: inline;
+}
+<div class="clear"></div>
 #show_container {
   margin-left: 15px;
 }
