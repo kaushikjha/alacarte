@@ -13,9 +13,9 @@ Feature: Sign Up
   
   Scenario: User signs up with valid data
     When I go to the sign up page
-    And I fill in "Email" with "email@person.com"
-    And I fill in "Password" with "password"
-    And I fill in "Password Confirmation" with "password"
+    And I fill in "user_email" with "email@person.com"
+    And I fill in "user_password" with "password"
+    And I fill in "user_password_confirmation" with "password"
     And I press "Register"
     Then I should see "Account registered!"
   
