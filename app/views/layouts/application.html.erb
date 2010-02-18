@@ -26,11 +26,25 @@
         <div id="nav">
           <% if signed_in? %>
             <div id="nav_top"></div>
+            <div id="nav_middle"></div>
           <% else %>
             <div id="nav_top_main"></div>
+            <div id="nav_middle">
+              <h1>Log In</h1>
+              <% form_for UserSession.new, :url => user_session_path do |f| %>
+                <%= f.error_messages %>
+                <%= f.label :email %><br />
+                <%= f.text_field :email %><br />
+                <br />
+                <%= f.label :password %><br />
+                <%= f.password_field :password %><br />
+                <br />
+                <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+                <br />
+                <%= f.submit "Login" %>
+              <% end %>
+            </div>
           <% end %>
-          <div id="nav_middle">
-          </div>
           <div id="nav_bottom"></div>
         </div>
         <div id="edit_section">
