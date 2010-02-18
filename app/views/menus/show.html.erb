@@ -1,6 +1,9 @@
 <% title '<img src="/images/title_manage_menu.png" alt="" />' %>
 
-<h1 id="title_menu_name">Current Menu: <%= @menu.name %></h1>
+<h1 id="title_menu_name">
+  Current Menu: <%= @menu.name %>
+  <%= link_to "(edit)", edit_menu_path(@menu) %>
+</h1>
 <div id="show_container">
   <% if @menu.categories.empty? %>
     Now, let's add a category.
