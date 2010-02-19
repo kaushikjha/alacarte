@@ -7,14 +7,13 @@ class Ability
     if !user.new_record?
       can :index, :all
       can :create, :all
-      can :position, :all
-      can [:show, :update, :destroy], Menu do |menu|
+      can [:show, :update, :destroy, :position], Menu do |menu|
         menu.try(:user) == user
       end
-      can [:show, :edit, :destroy], Category do |category|
+      can [:show, :edit, :destroy, :position], Category do |category|
         category.try(:user) == user
       end
-      can [:show, :update, :destroy], Item do |item|
+      can [:show, :update, :destroy, :position], Item do |item|
         item.category.try(:user) == user
       end
     else
