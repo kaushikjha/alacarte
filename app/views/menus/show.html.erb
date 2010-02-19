@@ -30,7 +30,7 @@
     {
       axis: 'y',
       dropOnEmpty: false,
-      handle: '.handle',
+      handle: '.category-handle',
       cursor: 'crosshair',
       items: '.category_sections',
       opacity: 0.4,
@@ -44,6 +44,27 @@
             $('#categories-list').effect('highlight');
           },
           url: '/categories/position'
+        })
+      }
+    });
+    $('.items-list').sortable(
+    {
+      axis: 'y',
+      dropOnEmpty: false,
+      handle: '.item-handle',
+      cursor: 'crosshair',
+      items: '.item_info',
+      opacity: 0.4,
+      scroll: true,
+      update: function(b, u) {
+        $.ajax({
+          type: 'post',
+          data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
+          dataType: 'script',
+          complete: function(request) {
+            $('#items-list').effect('highlight');
+          },
+          url: '/items/position'
         })
       }
     });

@@ -68,4 +68,10 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def position
+    item = current_user.items.find(params[:id])
+    item.insert_at(params[:position])
+    render :layout => false
+  end
 end

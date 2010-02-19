@@ -1,4 +1,5 @@
 class Item < ActiveRecord::Base
+  acts_as_list :scope => :category
   belongs_to :user
   belongs_to :category
   has_many :prices, :dependent => :destroy
