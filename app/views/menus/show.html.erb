@@ -9,9 +9,11 @@
   <% if @menu.categories.empty? %>
     Now, let's add a category.
   <% else %>
-    <% @menu.categories.each do |category| %>
-      <%= render "shared/category", :category => category %>
-    <% end %>
+    <div id="categories-list">
+      <% @menu.categories.each do |category| %>
+        <%= render "shared/category", :category => category %>
+      <% end %>
+    </div>
   <% end %>
 
   <% form_for [@menu, Category.new] do |f| -%>
@@ -21,3 +23,50 @@
     </p>
   <% end -%>
 </div>
+
+<% content_for :javascript do %>
+  <% javascript_tag do %>
+    $('#categories-list').sortable(
+    {
+      axis: 'y',
+      dropOnEmpty: false,
+      handle: '.category-handle',
+      cursor: 'crosshair',
+      items: '.category_sections',
+      opacity: 0.4,
+      scroll: true,
+      update: function(b, u) {
+        $.ajax({
+          type: 'post',
+          data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
+          dataType: 'script',
+          complete: function(request) {
+            $('#categories-list').effect('highlight');
+          },
+          url: '/categories/position'
+        })
+      }
+    });
+    $('.items-list').sortable(
+    {
+      axis: 'y',
+      dropOnEmpty: false,
+      handle: '.item-handle',
+      cursor: 'crosshair',
+      items: '.item_info',
+      opacity: 0.4,
+      scroll: true,
+      update: function(b, u) {
+        $.ajax({
+          type: 'post',
+          data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
+          dataType: 'script',
+          complete: function(request) {
+            $('#items-list').effect('highlight');
+          },
+          url: '/items/position'
+        })
+      }
+    });
+  <% end %>
+<% end %>

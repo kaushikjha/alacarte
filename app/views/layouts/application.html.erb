@@ -3,8 +3,8 @@
 <html>
   <head>
     <title>Alacarte</title>
-    <%= stylesheet_link_tag 'reset', 'application' %>
-    <%= javascript 'jquery', 'application' %>
+    <%= stylesheet_link_tag 'reset', 'application', 'ui-lightness/jquery-ui' %>
+    <%= javascript 'jquery', 'jquery-ui', 'application' %>
     <%= yield(:head) %>
   </head>
   <body>
@@ -62,5 +62,6 @@
       <div class="clear"></div>
     </div><!--end container-->
     <div id="container_bottom"></div>
+    <%= yield :javascript %>
   </body>
 </html>
