@@ -69,6 +69,6 @@ class CategoriesController < ApplicationController
   def position
     category = current_user.categories.find(params[:id])
     category.insert_at(params[:position])
-    render :layout => false
+    render :nothing => true
   end
 end

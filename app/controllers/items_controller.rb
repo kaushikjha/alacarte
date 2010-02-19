@@ -72,6 +72,6 @@ class ItemsController < ApplicationController
   def position
     item = current_user.items.find(params[:id])
     item.insert_at(params[:position])
-    render :layout => false
+    render :nothing => true
   end
 end

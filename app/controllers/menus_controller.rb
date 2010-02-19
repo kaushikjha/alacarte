@@ -108,6 +108,6 @@ class MenusController < ApplicationController
   def position
     menu = current_user.menus.find(params[:id])
     menu.insert_at(params[:position])
-    render :layout => false
+    render :nothing => true
   end
 end
