@@ -70,6 +70,10 @@ a {
   list-style: disc;
 }
 
+.menu-handle, .category-handle, .item-handle {
+  display: none;
+}
+
 /******************* From Alacarte PHP Development *******************/
 p {
   padding: 0 0 13px 0;
@@ -300,6 +304,7 @@ a:hover {
   border: 1px solid #E2E9E2;
   margin: 5px 0;
   padding: 10px;
+  position: relative;
 }
 .category_buttons {
   float: right;
@@ -317,4 +322,9 @@ a:hover {
 #new_category p{
   margin: auto;
   display: block;
+}
+.category-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
 }

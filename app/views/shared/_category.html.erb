@@ -1,10 +1,10 @@
 <div class="category_sections" id="category_<%= category.id -%>">
   <h2><%= category.name %></h2>
+    <p class="category-handle"><%= image_tag('/images/icons/move.png') %></p>
   <div class="category_buttons">
     <p><%= link_to '<img src="/images/button_add_item.jpg" alt="add item" title="add item to ' + category.name + '" />', new_category_item_path(category) %></p>
     <p><%= link_to '<img src="/images/button_edit.jpg" alt="edit" title="edit ' + category.name + '" />', edit_category_path(category) %></p>
     <p><%= link_to '<img src="/images/button_delete.jpg" alt="delete" />', category_path(category), :method => :delete, :confirm => "Are you sure you want to delete #{category.name}?  (This will delete all items and prices in the category.)" %></p>
-    <p class="category-handle">[handle]</p>
   </div>
   <div class="items-list">
     <% category.items.each do |item| %>

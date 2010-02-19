@@ -26,6 +26,14 @@
 
 <% content_for :javascript do %>
   <% javascript_tag do %>
+    $('.category_sections').hover(
+      function(){ $(this).find('.category-handle').show(); },
+      function(){ $(this).find('.category-handle').hide(); }
+    );
+    $('.item_info').hover(
+      function(){ $(this).find('.item-handle').show(); },
+      function(){ $(this).find('.item-handle').hide(); }
+    );
     $('#categories-list').sortable(
     {
       axis: 'y',
