@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :prices
 
   map.resources :menus, :has_many => :categories, :member => { :print => :get }, :collection => { :position => :post }
-  map.resources :categories, :has_many => :items
+  map.resources :categories, :has_many => :items, :collection => { :position => :post }
   map.resources :items, :except => [:index, :show]
 
   map.with_options(:controller => 'pages', :action => 'show') do |pages|

@@ -65,4 +65,10 @@ class CategoriesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def position
+    category = current_user.categories.find(params[:id])
+    category.insert_at(params[:position])
+    render :layout => false
+  end
 end
