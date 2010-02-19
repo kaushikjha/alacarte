@@ -32,6 +32,12 @@ class MenusController < ApplicationController
   # GET /menus/new.xml
   def new
     @menu = Menu.new
+    m = Menu.find(:all)
+    if m.size < 1
+      @menu.position = 1
+    else
+      @menu.position = m.last.position + 1
+    end
 
     respond_to do |format|
       format.html # new.html.erb
@@ -49,6 +55,9 @@ class MenusController < ApplicationController
   def create
     @user = current_user
     @menu = @user.menus.new(params[:menu])
+    
+    m = Menu.find(:all)
+    @menu.position = m.last.position + 1
 
     respond_to do |format|
       if @menu.save
@@ -94,5 +103,11 @@ class MenusController < ApplicationController
   def print
     @menu = Menu.find(params[:id])
     render :layout => "print"
+  end
+  
+  def position
+    menu = current_user.menus.find(params[:id])
+    menu.insert_at(params[:position])
+    render :layout => false
   end
 end

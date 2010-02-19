@@ -7,6 +7,7 @@ class Ability
     if !user.new_record?
       can :index, :all
       can :create, :all
+      can :position, :all
       can [:show, :update, :destroy], Menu do |menu|
         menu.try(:user) == user
       end

@@ -1,4 +1,5 @@
 class Menu < ActiveRecord::Base
+  acts_as_list :scope => :user
   belongs_to :user
   has_many :categories, :dependent => :destroy
   
