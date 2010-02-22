@@ -10,7 +10,7 @@ class Ability
       can [:show, :update, :destroy, :position, :print], Menu do |menu|
         menu.try(:user) == user
       end
-      can [:show, :edit, :destroy, :position], Category do |category|
+      can [:show, :update, :destroy, :position], Category do |category|
         category.try(:user) == user
       end
       can [:show, :update, :destroy, :position], Item do |item|
