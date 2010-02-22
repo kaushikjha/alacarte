@@ -70,6 +70,10 @@ a {
   list-style: disc;
 }
 
+.menu-handle, .category-handle, .item-handle {
+  display: none;
+}
+
 /******************* From Alacarte PHP Development *******************/
 p {
   padding: 0 0 13px 0;

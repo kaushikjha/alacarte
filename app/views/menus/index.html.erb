@@ -6,6 +6,41 @@
 
 <p class="center"><%= link_to image_tag("/images/button_new_menu.png"), new_menu_path %></p>
 
-<% @menus.each do |menu| %>
-  <%= link_to menu.name, menu_path(menu) %> - <%= link_to "delete", menu, :method => :delete, :confirm => "Are you sure you want to delete #{menu.name}? (This will delete all categories and items in this menu.)" %><br />
+<ul id="menus-list">
+  <% @menus.each do |menu| %>
+    <li id="menu_<%= menu.id -%>">
+      <span class="menu-handle"><%= image_tag('/images/icons/move.png') %></span>
+      <%= link_to menu.name, menu_path(menu) %> - <%= link_to "delete", menu, :method => :delete, :confirm => "Are you sure you want to delete #{menu.name}? (This will delete all categories and items in this menu.)" %>
+    </li>
+  <% end %>
+</ul>
+
+<% content_for :javascript do %>
+  <% javascript_tag do %>
+    $('li').hover(
+    function(){ $(this).find('.menu-handle').show(); },
+    function(){ $(this).find('.menu-handle').hide(); }
+    );
+    $('#menus-list').sortable(
+    {
+      axis: 'y',
+      dropOnEmpty: false,
+      handle: '.menu-handle',
+      cursor: 'crosshair',
+      items: 'li',
+      opacity: 0.4,
+      scroll: true,
+      update: function(b, u) {
+        $.ajax({
+          type: 'post',
+          data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
+          dataType: 'script',
+          complete: function(request) {
+            $('#menus-list').effect('highlight');
+          },
+          url: '/menus/position'
+        })
+      }
+    });
+  <% end %>
 <% end %>
