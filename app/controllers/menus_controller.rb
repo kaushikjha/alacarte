@@ -56,8 +56,12 @@ class MenusController < ApplicationController
     @user = current_user
     @menu = @user.menus.new(params[:menu])
     
-    m = Menu.find(:all)
-    @menu.position = m.last.position + 1
+    m = @user.menus.find(:all)
+    if m.present?
+      @menu.position = m.last.position + 1
+    else
+      @menu.position = 1
+    end    
 
     respond_to do |format|
       if @menu.save
