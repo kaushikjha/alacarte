@@ -9,7 +9,7 @@ class InvitationsController < ApplicationController
       flash[:notice] = "Thank you.  We'll notify you when we're ready."
       redirect_to '/'
     else
-      flash[:error] = @invitation.errors
+      flash[:error] = "There was a problem.  Please try again."
       redirect_to '/'
     end
   end

@@ -26,3 +26,6 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+# ROOT constant for rake invitation:send
+ROOT = '' # TODO Set this constant.
