@@ -14,9 +14,9 @@
         <%= link_to image_tag("/images/logo.png", :id => "logo"), "/" %>
         <% if signed_in? %>
           <div id="tabs">
-            <%= link_to image_tag("/images/tab_home.jpg", :alt => "home"), "/" %>
-             <a href=""><img src="/images/tab_new_menu.jpg" alt="home" /></a>
-             <a href=""><img src="/images/tab_help.jpg" alt="home" /></a>
+            <%= link_to image_tag("/images/tab_home.jpg", :alt => "Home"), "/" %>
+            <%= link_to image_tag('/images/tab_new_menu.jpg', :alt => "New Menu"), new_menu_path %>
+            <a href="#"><img src="/images/tab_help.jpg" alt="Help" /></a>
           </div>
         <% end %>
       </div>
