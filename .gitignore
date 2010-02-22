@@ -6,3 +6,4 @@ db/*.sqlite3
 .DS_Store
 test/*
 webrat-*.html
+Thumbs.db

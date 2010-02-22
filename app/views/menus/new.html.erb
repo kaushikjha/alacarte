@@ -1,13 +1,13 @@
-<h1>New menu</h1>
+<% title '<img src="/images/title_new_menu.png" alt="" />' %>
 
-<% form_for(@menu) do |f| %>
+<% form_for @menu, :html => { :class => 'form_style' } do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, 'Description <span>(optional)</span>' %>
     <%= f.text_area :description %>
   </p>
   <p>

@@ -70,10 +70,6 @@ a {
   list-style: disc;
 }
 
-.menu-handle, .category-handle, .item-handle {
-  display: none;
-}
-
 /******************* From Alacarte PHP Development *******************/
 p {
   padding: 0 0 13px 0;
@@ -212,7 +208,7 @@ a:hover {
   margin-left: 10px;
   float: left;
   width: 290px;
-  margin-top: 10px;
+  margin-top: 4px;
   color: #555;
 }
 #nav_middle h1 {
@@ -304,7 +300,6 @@ a:hover {
   border: 1px solid #E2E9E2;
   margin: 5px 0;
   padding: 10px;
-  position: relative;
 }
 .category_buttons {
   float: right;
@@ -312,7 +307,6 @@ a:hover {
 .category_buttons p {
   display: inline;
 }
-<div class="clear"></div>
 #show_container {
   margin-left: 15px;
 }
@@ -323,8 +317,45 @@ a:hover {
   margin: auto;
   display: block;
 }
-.category-handle {
-  position: absolute;
-  top: 2px;
-  left: 2px;
+
+/********************************************some reusable styles***/
+.h_pretty {
+  font-family: tahoma, trebuchet, verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 3px;
+  color: #648466;
 }
+
+/***form***/
+
+.form_style input[type=text] {
+  width: 445px;
+  height: 21px;
+  padding-top: 5px;
+  padding-left: 4px;
+}
+.form_style label {
+  font-size: 13px;
+  font-family: tahoma, trebuchet, verdana, sans-serif;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form_style label span {
+  font-size: 11px;
+  color: #666;
+  font-weight: normal;
+}
+.form_style textarea {
+  width: 445px;
+  padding-left: 4px;
+  height: 100px;
+}
+.form_style {
+  margin: 10px auto;
+  display: block;
+  width: 450px;
+}
+/***end reusable***/

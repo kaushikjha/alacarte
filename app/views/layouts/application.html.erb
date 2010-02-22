@@ -3,8 +3,8 @@
 <html>
   <head>
     <title>Alacarte</title>
-    <%= stylesheet_link_tag 'reset', 'application', 'ui-lightness/jquery-ui' %>
-    <%= javascript 'jquery', 'jquery-ui', 'application' %>
+    <%= stylesheet_link_tag 'reset', 'application' %>
+    <%= javascript 'jquery', 'application' %>
     <%= yield(:head) %>
   </head>
   <body>
@@ -15,8 +15,8 @@
         <% if signed_in? %>
           <div id="tabs">
             <%= link_to image_tag("/images/tab_home.jpg", :alt => "home"), "/" %>
-            <%= link_to image_tag("/images/tab_menus.jpg", :alt => "Add Menu"), new_menu_path %>
-            <!-- <a href=""><img src="/images/tab_help.jpg" alt="home" /></a> -->
+             <a href=""><img src="/images/tab_new_menu.jpg" alt="home" /></a>
+             <a href=""><img src="/images/tab_help.jpg" alt="home" /></a>
           </div>
         <% end %>
       </div>
@@ -62,6 +62,5 @@
       <div class="clear"></div>
     </div><!--end container-->
     <div id="container_bottom"></div>
-    <%= yield :javascript %>
   </body>
 </html>
