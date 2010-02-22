@@ -1,1 +1,11 @@
 %img{'src' => '/images/welcome.jpg', 'id' => 'welcome_image'}
+
+.private_beta
+  %p
+    We're currently in private beta.  If you're interested in signing up, please enter your email address below.
+  -form_for Invitation.new do |f|
+    =error_messages_for 'invitation'
+    %p
+      =f.label :recipient_email, "Email"
+      =f.text_field :recipient_email
+      =f.submit "Submit"

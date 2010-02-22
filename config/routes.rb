@@ -9,6 +9,8 @@ ActionController::Routing::Routes.draw do |map|
     pages.connect '/', :id => 'home'
     pages.connect '/pages/:id'
   end
+  
+  map.resources :invitations
 
   map.resource :user_session
   map.resource :account, :controller => "users"
@@ -16,5 +18,5 @@ ActionController::Routing::Routes.draw do |map|
 
   map.login '/login', :controller => "user_sessions", :action => :new
   map.logout '/logout', :controller => "user_sessions", :action => :destroy
-  map.register '/register', :controller => "users", :action => :new
+  map.register '/register/:invitation_token', :controller => "users", :action => :new
 end

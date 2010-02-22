@@ -5,4 +5,17 @@ class User < ActiveRecord::Base
   has_many :categories
   has_many :items
   has_many :prices
+  
+  belongs_to :invitation
+  
+  validates_uniqueness_of :email
+  validates_presence_of :invitation_id, :message => 'is required'
+  validates_uniqueness_of :invitation_id
+  
+  def invitation_token
+    invitation.token if invitation
+  end
+  def invitation_token=(token)
+    self.invitation = Invitation.find_by_token(token)
+  end
 end
