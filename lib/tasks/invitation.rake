@@ -11,7 +11,7 @@ namespace :invitation do
       else
         puts "Sending #{invitations.length} invitations..."
         invitations.each do |invitation|
-          Mailer.deliver_invitation(invitation, [ROOT, "/signup/", invitation.token].join)
+          Mailer.deliver_invitation(invitation, [ROOT, "/register/", invitation.token].join)
         end
       end
     end
