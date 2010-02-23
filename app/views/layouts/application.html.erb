@@ -10,7 +10,12 @@
   <body>
     <div id="header">
       <div id="header_stuff">
-        <div id="green_bar"></div>
+        <div id="green_bar">
+          <% if signed_in? %>
+            <%= link_to "Account", account_path %>
+            <%= link_to "Logout", logout_path %>
+          <% end %>
+        </div>
         <%= link_to image_tag("/images/logo.png", :id => "logo"), "/" %>
         <% if signed_in? %>
           <div id="tabs">
