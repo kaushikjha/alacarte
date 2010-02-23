@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
   load_and_authorize_resource
+  before_filter :require_token
   
   # GET /menus
   # GET /menus.xml

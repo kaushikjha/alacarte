@@ -20,6 +20,6 @@ class User < ActiveRecord::Base
   end
   
   def self.reset_all_hits
-    User.update_all(:hits => 0, "hits > 0")
+    User.update_all("hits = 0", "hits > 0")
   end
 end

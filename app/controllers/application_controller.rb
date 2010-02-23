@@ -11,6 +11,8 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user, :signed_in?
   
+  before_filter :hit!
+  
   def signed_in?
     ! current_user.nil?
   end
@@ -56,5 +58,39 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
+  end
+  
+  def require_token
+    if !params[:token]
+      error = Error["Invalid Token"]
+      respond_to do |format|
+        format.xml { render :xml => error, :status => 401 }
+        format.json { render :json => error, :status => 401 }
+      end
+    end
+  end
+  
+  def hit!
+    if params[:token]
+      if @user = User.find_by_single_access_token(params[:token])
+        if @user.hits < @user.rate_limit
+          @user.increment!(:hits)
+          @user_session = UserSession.new(User.find_by_single_access_token(params[:token]))
+          @user_session.save
+        else
+          error = Error["Rate Limited"]
+          respond_to do |format|
+            format.xml { render :xml => error, :status => 403 }
+            format.json { render :json => error, :status => 403 }
+          end
+        end
+      else
+        error = Error["Invalid Token"]
+        respond_to do |format|
+          format.xml { render :xml => error, :status => 401 }
+          format.json { render :json => error, :status => 401 }
+        end
+      end
+    end
   end
 end
