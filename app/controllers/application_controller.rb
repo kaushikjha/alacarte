@@ -11,15 +11,27 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user, :signed_in?
   
-  before_filter :hit!
+  around_filter ApiAuthorizedFilter.new
   
   def signed_in?
     ! current_user.nil?
   end
   
+  def sign_out!
+    @current_user_session.destroy unless !@current_user_session
+  end
+  
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = "Access denied."
-    redirect_to '/'
+    if request.format.html?
+      flash[:error] = "Access denied."
+      redirect_to '/'
+    else
+      error = Error["Invalid Token"]
+      respond_to do |format|
+        format.xml { render :xml => error, :status => 401 }
+        format.json { render :json => error, :status => 401 }
+      end
+    end
   end
 
   private
@@ -66,30 +78,6 @@ class ApplicationController < ActionController::Base
       respond_to do |format|
         format.xml { render :xml => error, :status => 401 }
         format.json { render :json => error, :status => 401 }
-      end
-    end
-  end
-  
-  def hit!
-    if params[:token]
-      if @user = User.find_by_single_access_token(params[:token])
-        if @user.hits < @user.rate_limit
-          @user.increment!(:hits)
-          @user_session = UserSession.new(User.find_by_single_access_token(params[:token]))
-          @user_session.save
-        else
-          error = Error["Rate Limited"]
-          respond_to do |format|
-            format.xml { render :xml => error, :status => 403 }
-            format.json { render :json => error, :status => 403 }
-          end
-        end
-      else
-        error = Error["Invalid Token"]
-        respond_to do |format|
-          format.xml { render :xml => error, :status => 401 }
-          format.json { render :json => error, :status => 401 }
-        end
       end
     end
   end

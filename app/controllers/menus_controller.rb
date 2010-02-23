@@ -1,6 +1,9 @@
 class MenusController < ApplicationController
   load_and_authorize_resource
-  before_filter :require_token
+  
+  before_filter do |controller|
+    :require_token unless controller.request.format.html?
+  end
   
   # GET /menus
   # GET /menus.xml
@@ -21,7 +24,8 @@ class MenusController < ApplicationController
   # GET /menus/1
   # GET /menus/1.xml
   def show
-    @menu = Menu.find(params[:id])
+    @user = current_user
+    @menu = @user.menus.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
