@@ -70,9 +70,6 @@ a {
   list-style: disc;
 }
 
-.menu-handle, .category-handle, .item-handle {
-  display: none;
-}
 
 /******************* From Alacarte PHP Development *******************/
 p {
@@ -260,7 +257,7 @@ a:hover {
 #edit_section {
   width: 635px;
   float: right;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 #title {
   background: url(/images/title.jpg) no-repeat;
@@ -277,10 +274,15 @@ a:hover {
 /***************************************show***/
 
 #title_menu_name {
-  color: #96AF96;
-  font-size: 16px;
-  margin: 10px auto;
-  text-align: center;
+  color: #678567;
+  font-size: 14px;
+  margin: 20px 5px 1px 5px;
+  font-family: tahoma;
+  font-weight: normal;
+}
+#title_menu_name a{
+  color: #666;
+  font-size: 11px;
 }
 .clear {
   clear: both;
@@ -292,12 +294,16 @@ a:hover {
 #show_new_category input {
   float: left;
 }
-#show_new_category input[type=image] {
+#show_new_category {
+  margin: auto;
+  width: 490px;
+  padding-top: 10px;
 }
 #category_name {
-  height: 26px;
+  height: 21px;
   width: 289px;
   margin-top: 1px;
+  padding-top: 6px;
 }
 .category_sections {
   background: #F7F9F7;
@@ -312,7 +318,7 @@ a:hover {
   display: inline;
 }
 #show_container {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 #new_category h2{
   text-align: center;
@@ -322,6 +328,48 @@ a:hover {
   display: block;
 }
 
+#categories-list {
+  margin: 20px auto;
+}
+.button_move {
+  cursor: move;
+}
+.link_move {
+  cursor: move;
+  color: #688568;
+  text-decoration: underline;
+}
+.category_sections h2 {
+  width: 270px;
+  margin-bottom: 10px;
+  margin-top: 3px;
+  float: left;
+  color: #333;
+}
+.item_name_bar {
+  padding-top: 3px;
+  padding-left: 5px;
+  height: 5px;
+  display: block;
+  margin-left: 10px;
+  background: #E6ECE6;
+}
+.item_name_bar span {
+  float: right;
+  padding-right: 10px;
+}
+.item_name_bar:hover {
+}
+.item_details {
+  margin-left: 25px;
+  line-height: 20px;
+  color: #444;
+}
+.item_info {
+  font-size: 12px;
+  font-family: tahoma, trebuchet, verdana, sans-serif;
+  margin: 10px 0;
+}
 /********************************************some reusable styles***/
 .h_pretty {
   font-family: tahoma, trebuchet, verdana, sans-serif;
@@ -361,5 +409,29 @@ a:hover {
   margin: 10px auto;
   display: block;
   width: 450px;
+}
+.description_field, .price_field {
+  width: 195px !important;
+}
+.description_container, .price_container {
+  width: 215px;
+  float: left;
+}
+.fields {
+  clear: both;
+  position: relative;
+}
+.remove_field {
+  top: 20px;
+  position: absolute;
+  right: 0px;
+}
+.add_field {
+  margin-left: 291px;
+  margin-top: 10px;
+}
+#form_submit {
+  margin: auto;
+  display: block;
 }
 /***end reusable***/

@@ -1,10 +1,9 @@
-<h1>Editing item</h1>
+<% title '<img src="/images/title_edit_menu_items.png" alt="" />' %>
 
-<% form_for(@item) do |f| %>
+<% form_for(@item, :html => { :class => 'form_style'}) do |f| %>
   <%= render "form", :f => f %>
-  <p>
-    <%= f.submit 'Update' %>
+  <p style="float: right;">
+    <%= image_submit_tag "/images/button_save_changes.jpg" %>
   </p>
+<p style="float: left;"><%= link_to image_tag("/images/button_delete_item.jpg"), @item, :method => :delete, :confirm => "Are you sure you want to delete #{@item.name}?" %></p>
 <% end %>
-
-<%= link_to "delete #{@item.name}", @item, :method => :delete, :confirm => "Are you sure you want to delete #{@item.name}?" %>

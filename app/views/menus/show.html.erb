@@ -7,7 +7,7 @@
 </h1>
 <div id="show_container">
   <% if @menu.categories.empty? %>
-    Now, let's add a category.
+    <div id="categories-list">To get started, please add a category below.</div>
   <% else %>
     <div id="categories-list">
       <% @menu.categories.each do |category| %>
@@ -26,20 +26,11 @@
 
 <% content_for :javascript do %>
   <% javascript_tag do %>
-    $('.category_sections').hover(
-      function(){ $(this).find('.category-handle').show(); },
-      function(){ $(this).find('.category-handle').hide(); }
-    );
-    $('.item_info').hover(
-      function(){ $(this).find('.item-handle').show(); },
-      function(){ $(this).find('.item-handle').hide(); }
-    );
     $('#categories-list').sortable(
     {
       axis: 'y',
       dropOnEmpty: false,
-      handle: '.category-handle',
-      cursor: 'crosshair',
+      handle: '.button_move',
       items: '.category_sections',
       opacity: 0.4,
       scroll: true,
@@ -59,8 +50,7 @@
     {
       axis: 'y',
       dropOnEmpty: false,
-      handle: '.item-handle',
-      cursor: 'crosshair',
+      handle: '.link_move',
       items: '.item_info',
       opacity: 0.4,
       scroll: true,

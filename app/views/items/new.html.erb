@@ -1,8 +1,8 @@
-<h1>New item</h1>
+<% title '<img src="/images/title_add_item.png" alt="" />' %>
 
-<% form_for([@category, @item]) do |f| %>
+<% form_for([@category, @item], :html => { :class => 'form_style'}) do |f| %>
   <%= render "form", :f => f %>
   <p>
-    <%= f.submit 'Add' %>
+    <%= image_submit_tag "/images/button_add_this_item.jpg", :id => "form_submit" %>
   </p>
 <% end %>
