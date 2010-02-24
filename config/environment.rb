@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :version => '>=2.2'
   config.gem "authlogic"
   config.gem "cancan"
+  config.gem 'hoptoad_notifier'
 
   config.time_zone = 'UTC'
 end
