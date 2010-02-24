@@ -29,7 +29,7 @@ class MenusController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @menu }
+      format.xml  { render :xml => @menu.to_xml(:include => {:categories => {:include => {:items => {:include => :prices}}}}) }
     end
   end
 
