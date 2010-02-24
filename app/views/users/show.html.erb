@@ -3,6 +3,10 @@
 <p>
   <strong>Email:</strong>
   <%=h @user.email %>
-  <%= link_to '(Edit)', edit_account_path %>
 </p>
+<p>
+  <strong>API Key:</strong>
+  <%=h @user.single_access_token %>
+</p>
+<%= link_to '(Edit)', edit_account_path %>
  

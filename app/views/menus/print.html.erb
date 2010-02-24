@@ -1,17 +1,23 @@
-<h1><%= @menu.name %></h1>
+<div id="header">
+  <h1>Restaurant Name - <%= @menu.name %></h1>
+  <%= image_tag("/images/menu_hr.jpg") %>
+</div>
 
 <%- @menu.categories.each do |category| -%>
-  <h2><%= category.name %></h2>
-  <%= "<p class='category_description'>#{category.description}</p>" unless category.description.nil? %>
+  <h1><%= category.name %></h1>
+  <%= "<h3>#{category.description}</h3>" unless category.description.nil? %>
   <% category.items.each do |item| %>
-    <div class="item">
-      <p><%= item.name %></p>
+    <div class="menu_item">
+      <h2><%= item.name %></h2>
+      <%= "<h4>#{item.description}</h4>" unless item.description.empty? %>
+      <table class="size_holder">
       <%- item.prices.each do |price| -%>
-        <p>
-        <%= "#{price.description}: " unless price.description.blank? %> 
-        <%= number_to_currency(price.price) %>
-        </p>
+        <tr>
+          <td class="item_size"><%= "#{price.description}: " unless price.description.blank? %></td>
+          <td class="item_price"><%= number_to_currency(price.price) %></td>
+        </tr>
       <%- end -%>
+      </table>
     </div>
   <%- end -%>
 <%- end -%>

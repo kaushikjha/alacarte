@@ -1,6 +1,10 @@
 class MenusController < ApplicationController
   load_and_authorize_resource
   
+  before_filter do |controller|
+    :require_token unless controller.request.format.html?
+  end
+  
   # GET /menus
   # GET /menus.xml
   def index
@@ -20,11 +24,12 @@ class MenusController < ApplicationController
   # GET /menus/1
   # GET /menus/1.xml
   def show
-    @menu = Menu.find(params[:id])
+    @user = current_user
+    @menu = @user.menus.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @menu }
+      format.xml  { render :xml => @menu.to_xml(:include => {:categories => {:include => {:items => {:include => :prices}}}}) }
     end
   end
 

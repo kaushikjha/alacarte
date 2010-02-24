@@ -5,3 +5,5 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+Error.create(:name => "Invalid Token", :value => "A valid token must be specified in order to access this resource")
+Error.create(:name => "Rate Limited", :value => "Rate limit reached")

@@ -11,13 +11,27 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user, :signed_in?
   
+  around_filter ApiAuthorizedFilter.new
+  
   def signed_in?
     ! current_user.nil?
   end
   
+  def sign_out!
+    @current_user_session.destroy unless !@current_user_session
+  end
+  
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = "Access denied."
-    redirect_to '/'
+    if request.format.html?
+      flash[:error] = "Access denied."
+      redirect_to '/'
+    else
+      error = Error["Invalid Token"]
+      respond_to do |format|
+        format.xml { render :xml => error, :status => 401 }
+        format.json { render :json => error, :status => 401 }
+      end
+    end
   end
 
   private
@@ -56,5 +70,15 @@ class ApplicationController < ActionController::Base
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
+  end
+  
+  def require_token
+    if !params[:token]
+      error = Error["Invalid Token"]
+      respond_to do |format|
+        format.xml { render :xml => error, :status => 401 }
+        format.json { render :json => error, :status => 401 }
+      end
+    end
   end
 end

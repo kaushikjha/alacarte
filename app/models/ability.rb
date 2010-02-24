@@ -17,7 +17,7 @@ class Ability
         item.category.try(:user) == user
       end
     else
-      cannot :manage, :all
+      can :manage, :all
     end
   end  
 end

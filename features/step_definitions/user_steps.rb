@@ -1,9 +1,10 @@
 Given /^I am signed up with "(.*)\/(.*)"$/ do |email, password|
-  user = User.create!(:email => email, :password => password, :password_confirmation => password)
+  invitation = Invitation.create!(:recipient_email => email)
+  user = User.create!(:invitation_id => invitation.id, :email => email, :password => password, :password_confirmation => password)
 end
 
 Given /^I am signed up with and signed in as "(.*)\/(.*)"$/ do |email, password|
-  user = User.create!(:email => email, :password => password, :password_confirmation => password)
+  Given %{I am signed up with "#{email}/#{password}"}
   When %{I sign in as "#{email}/#{password}"}
 end
 

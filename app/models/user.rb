@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   def invitation_token=(token)
     self.invitation = Invitation.find_by_token(token)
   end
+  
+  def self.reset_all_hits
+    User.update_all("hits = 0", "hits > 0")
+  end
 end
