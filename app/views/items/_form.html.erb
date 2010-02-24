@@ -1,13 +1,13 @@
 <%= f.error_messages %>
 <p>
-  <%= f.label :name %><br />
+  <%= f.label :name %>
   <%= f.text_field :name %>
 </p>
 <p>
-  <%= f.label :description %><br />
+  <%= f.label :description %>
   <%= f.text_area :description %>
 </p>
 <% f.fields_for :prices do |builder| %>
   <%= render "shared/price_fields", :f => builder %>
 <% end %>
-<p><%= link_to_add_fields "Add Price", f, :prices %></p>
+<p><%= link_to_add_fields image_tag("/images/button_add_field.jpg"), f, :prices, :class => 'add_field' %></p>

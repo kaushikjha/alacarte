@@ -1,11 +1,11 @@
 <div class="fields">
-  <p>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+  <p class="description_container">
+    <%= f.label :description, "Size <span>(or Type)</span>" %>
+    <%= f.text_field :description, :class => 'description_field' %>
   </p>
-  <p>
+  <p class="price_container">
     <%= f.label :price %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, :class => 'price_field' %>
   </p>
-  <p><%= link_to_remove_fields "remove", f %></p>
+  <p><%= link_to_remove_fields image_tag("/images/button_minus.jpg"), f, :class => 'remove_field', :title => 'Remove' %></p>
 </div>

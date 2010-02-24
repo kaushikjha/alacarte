@@ -1,8 +1,11 @@
-<p class="item_info" id="item_<%= item.id -%>">
-  <%= link_to item.name, edit_category_item_path(item.category, item) %> <span class="item-handle"><%= image_tag('/images/icons/move.png') %></span><br />
-  <% item.prices.each do |price| %>
-    <%= "#{price.description}: " unless price.description.blank? %> 
+<li class="item_info" id="item_<%= item.id -%>">
+
+<p class="item_name_bar"><%= link_to truncate(item.name, :length=>90, :omission=>'...'), edit_category_item_path(item.category, item) %> <span class="link_move">(move)</span></p>
+    <ul class="item_details">  
+      <% item.prices.each do |price| %>
+    <li><%= "#{truncate(price.description, :length=>40, :omission=>'...')}: " unless price.description.blank? %> 
     <%= number_to_currency(price.price) %>
-    <br />
+    </li>
   <% end %>
-</p>
+  </ul>
+</li>
