@@ -11,10 +11,10 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "cancan"
   config.gem 'hoptoad_notifier'
-  
-  ActiveSupport::Inflector.inflections do |inflect|
-    inflect.irregular 'feedback', 'feedback'
-  end
 
   config.time_zone = 'UTC'
+end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'feedback', 'feedback'
 end
