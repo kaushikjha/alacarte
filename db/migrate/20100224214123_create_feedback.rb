@@ -1,4 +1,4 @@
-class CreateFeedbacks < ActiveRecord::Migration
+class CreateFeedback < ActiveRecord::Migration
   def self.up
     create_table :feedback do |t|
       t.integer :user_id
