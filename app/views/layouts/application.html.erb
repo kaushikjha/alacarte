@@ -31,7 +31,9 @@
         <div id="nav">
           <% if signed_in? %>
             <div id="nav_top"></div>
-            <div id="nav_middle"></div>
+            <div id="nav_middle">
+              <%= render 'feedback/new' %>
+            </div>
           <% else %>
             <div id="nav_top_main"></div>
             <div id="nav_middle">

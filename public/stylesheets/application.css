@@ -435,3 +435,14 @@ a:hover {
   display: block;
 }
 /***end reusable***/
+
+/*** Feedback Form ***/
+#new_feedback input[type=text], #new_feedback textarea {
+  width: 225px;
+}
+#new_feedback textarea {
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 11px;
+  height: 225px;
+}
+/* End Feedback Form */
