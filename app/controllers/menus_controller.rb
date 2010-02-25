@@ -30,6 +30,12 @@ class MenusController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @menu.to_xml(:include => {:categories => {:include => {:items => {:include => :prices}}}}) }
+      format.pdf {
+        render :pdf => "menu.pdf",
+        :template => "menus/print.html.erb",
+        :layout => "print.html",
+        :show_as_html => !params[:debug].blank?
+        }
     end
   end
 
