@@ -32,7 +32,7 @@
           data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
           dataType: 'script',
           complete: function(request) {
-            $('#menus-list').effect('highlight');
+            $(u.item).effect('highlight');
           },
           url: '/menus/position'
         })

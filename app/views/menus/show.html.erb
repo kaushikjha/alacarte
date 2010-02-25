@@ -40,7 +40,7 @@
           data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
           dataType: 'script',
           complete: function(request) {
-            $('#categories-list').effect('highlight');
+            $(u.item).effect('highlight');
           },
           url: '/categories/position'
         })
@@ -60,7 +60,7 @@
           data: { id: $(u.item).attr('id').split('_')[1], position: $(u.item).index() + 1 },
           dataType: 'script',
           complete: function(request) {
-            $('#items-list').effect('highlight');
+            $(u.item).effect('highlight');
           },
           url: '/items/position'
         })
