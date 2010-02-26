@@ -23,7 +23,8 @@ module PdfHelper
 
   private
     def make_pdf(options = {})
-      html_string = render_to_string(:template => options[:template], :layout => options[:layout])
+      # html_string = render_to_string(:template => options[:template], :layout => options[:layout])
+      html_string = externals_to_absolute_path(render_to_string(:template => options[:template], :layout => options[:layout]))
       w = WickedPdf.new(options[:wkhtmltopdf])
       w.pdf_from_string(html_string, parse_options(options))
     end
@@ -97,5 +98,9 @@ module PdfHelper
         r += make_options(opts, [:redirect_delay, :zoom, :page_offset], "", :numeric)
         r + make_options(opts, [:book, :default_header, :disable_javascript, :greyscale, :lowquality, :enable_plugins, :disable_internal_links, :disable_external_links, :print_media_type, :disable_smart_shrinking, :use_xserver, :no_background], "", :boolean)
       end
+    end
+    
+    def externals_to_absolute_path(html)
+      html.gsub(/(src|href)="\//) { |s| "#{$1}=\"http://#{request.host_with_port}/" }
     end
 end

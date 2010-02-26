@@ -3,8 +3,7 @@
 <html>
   <head>
     <title>Alacarte</title>
-    <%= wicked_pdf_stylesheet_link_tag 'reset' %>
-    <%= wicked_pdf_stylesheet_link_tag 'print' %>
+    <%= stylesheet_link_tag 'reset', 'print', :media => "all" %>
     <%= yield(:head) %>
   </head>
   <body>
