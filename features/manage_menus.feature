@@ -10,9 +10,9 @@ Feature: Manage Menus
     Then I should see "Start by adding a menu"
     When I follow "New Menu"
     And I fill in "Name" with "New Menu"
-    And I press "Create"
+    And I press "form_submit"
     Then I should see "Menu: New Menu"
-    And I should see "Now, let's add a category"
+    And I should see "To get started, please add a category below."
   
   Scenario: Add Second Menu
     Given I am signed up with and signed in as "email@person.com/password"
@@ -22,9 +22,9 @@ Feature: Manage Menus
     And I should see "First Menu"
     When I follow "New Menu"
     And I fill in "Name" with "New Menu"
-    And I press "Create"
+    And I press "form_submit"
     Then I should see "Menu: New Menu"
-    And I should see "Now, let's add a category"
+    And I should see "To get started, please add a category below."
   
   Scenario: Existing Menu Name
     Given I am signed up with and signed in as "email@person.com/password"
@@ -33,7 +33,7 @@ Feature: Manage Menus
     Then I should not see "Start by adding a menu"
     When I follow "New Menu"
     And I fill in "Name" with "First Menu"
-    And I press "Create"
+    And I press "form_submit"
     Then I should see error messages  
   
   Scenario: Existing Menu Name, But Different User
@@ -44,6 +44,6 @@ Feature: Manage Menus
     When I am on the homepage
     And I follow "New Menu"
     And I fill in "Name" with "First Menu"
-    And I press "Create"
+    And I press "form_submit"
     Then I should see "Menu: First Menu"
     
