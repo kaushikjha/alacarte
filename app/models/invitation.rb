@@ -4,6 +4,8 @@ class Invitation < ActiveRecord::Base
   validates_presence_of :recipient_email
   validate :recipient_is_not_registered
   
+  validates_format_of :recipient_email, :with => /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$/
+  
   before_create :generate_token
   
   private
