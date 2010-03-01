@@ -1,12 +1,14 @@
-<h1 class="h1_pretty">My Profile</h1>
+<% title '<img src="/images/title_your_profile.png" alt="" />' %>
 
-<p>
-  <strong>Email:</strong>
-  <%=h @user.email %>
-</p>
-<p>
-  <strong>API Key:</strong>
-  <%=h @user.single_access_token %>
-</p>
-<%= link_to '(Edit)', edit_account_path %>
+<div id="your_profile">
+  <p>
+    <strong>Email:</strong>
+    <div><%=h @user.email %></div>
+  </p>
+  <p>
+    <strong>API Key:</strong>
+    <div><%=h @user.single_access_token %></div>
+  </p>
+<%= link_to image_tag("/images/button_edit.jpg"), edit_account_path %>
+</div>
  

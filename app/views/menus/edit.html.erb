@@ -1,16 +1,16 @@
-<h1>Editing menu</h1>
+<% title '<img src="/images/title_edit_menu.png" alt="" />' %>
 
 <% form_for @menu, :html => { :class => 'form_style' } do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :description, 'Description <span>(optional)</span>' %><br />
+    <%= f.label :description, 'Description <span>(optional)</span>' %>
     <%= f.text_area :description %>
   </p>
-  <p>
-    <%= f.submit 'Update' %>
+  <p class="submit_button_style">
+    <%= image_submit_tag "/images/button_save_changes.jpg" %>
   </p>
 <% end %>

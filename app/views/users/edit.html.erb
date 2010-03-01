@@ -1,9 +1,10 @@
-<h1>Edit My Account</h1>
- 
-<% form_for @user, :url => account_path do |f| %>
+<% title '<img src="/images/title_edit_your_profile.png" alt="" />' %>
+<% form_for @user, :html => { :class => 'form_style' }, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Update" %>
+    <p class="button_right">
+  <%= image_submit_tag "/images/button_save_changes.jpg" %>
+  </p>
+<p class="button_left"><%= link_to image_tag("/images/button_cancel.jpg"), account_path %></p>
 <% end %>
  
-<br /><%= link_to "My Profile", account_path %>

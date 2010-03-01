@@ -1,20 +1,23 @@
-<% title '<img src="/images/title_manage_menu.png" alt="" />' %>
+<% title '<img src="/images/title_your_menus.png" alt="" />' %>
 
 <% if @menus.empty? %>
   <h1 class="h_pretty center">Start by adding a menu.</h1>
 <% end %>
 
-<p class="center"><%= link_to image_tag("/images/button_new_menu.png"), new_menu_path %></p>
 
 <ul id="menus-list">
   <% @menus.each do |menu| %>
     <li id="menu_<%= menu.id -%>">
-      <span class="menu-handle"><%= image_tag('/images/icons/move.png') %></span>
-      <%= link_to menu.name, menu_path(menu) %> - <%= link_to "delete", menu, :method => :delete, :confirm => "Are you sure you want to delete #{menu.name}? (This will delete all categories and items in this menu.)" %>
+      <span><%= link_to menu.name, menu_path(menu) %></span>  
+      <span id="button_shift">
+      <%= link_to image_tag("/images/button_delete.jpg"), menu, :method => :delete, :confirm => "Are you sure you want to delete #{menu.name}? (This will delete all categories and items in this menu.)" %>
+      <span class="menu-handle"><a href=""><img src="/images/button_move.jpg" alt="move" /></a></span>
+      </span>
     </li>
   <% end %>
 </ul>
 
+<p class="center"><%= link_to image_tag("/images/button_new_menu.png"), new_menu_path %></p>
 <% content_for :javascript do %>
   <% javascript_tag do %>
     $('#menus-list').sortable(

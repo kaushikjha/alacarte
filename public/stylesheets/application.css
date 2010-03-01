@@ -144,6 +144,7 @@ body {
   height: 10px;
   width: 963px;
   margin: auto;
+  margin-bottom: 10px;
 }
 #green_bar {
   text-align: right;
@@ -153,11 +154,13 @@ body {
   color: white;
 }
 #green_bar p {
-  padding-top: 7px;
+  padding-top: 17px;
 }
 #green_bar a {
   color: white;
   margin-left: 30px;
+  margin-right: 10px;
+  line-height: 22px;
 }
 #tabs {
   float: right;
@@ -245,7 +248,9 @@ a:hover {
   margin: 3px 0;
 }
 #new_user_session input[type=text], #new_user_session input[type=password] {
-  width: 180px;
+  width: 184px;
+  color: #444;
+  padding: 5px 3px;
 }
 /***end nav***/
 #inner_container {
@@ -299,11 +304,11 @@ a:hover {
   width: 490px;
   padding-top: 10px;
 }
-#category_name {
+#show_new_category input#category_name {
   height: 21px;
-  width: 289px;
   margin-top: 1px;
   padding-top: 6px;
+  width: 289px;
 }
 .category_sections {
   background: #F7F9F7;
@@ -379,10 +384,24 @@ a:hover {
   margin-top: 3px;
   color: #648466;
 }
-
+/***login form***/
+#user_session_email {
+  width: 300px;
+}
 /***form***/
-
-.form_style input[type=text] {
+.submit_button_style {
+  text-align: center;
+  margin-top: 10px;
+}
+.button_left {
+  float: left;
+  margin-top: 5px;
+}
+.button_right {
+  float: right;
+  margin-top: 5px;
+}
+.form_style input[type=text], .form_style input[type=password] {
   width: 445px;
   height: 21px;
   padding-top: 5px;
@@ -438,11 +457,88 @@ a:hover {
 
 /*** Feedback Form ***/
 #new_feedback input[type=text], #new_feedback textarea {
-  width: 225px;
+  width: 215px;
+}
+#new_feedback {
+  width: 219px;
+  margin: auto;
 }
 #new_feedback textarea {
   font-family: Verdana, Helvetica, Arial;
   font-size: 11px;
-  height: 225px;
+  height: 125px;
+}
+
+#new_feedback label{
+  line-height: 20px;
+}
+
+#new_feedback input[type=image]{
+  margin-left: 133px;
+}
+#new_feedback p:last-child {
+  padding-bottom: 0px;
 }
 /* End Feedback Form */
+
+/*********************************************main page***/
+
+.private_beta p{
+  text-align: center;
+  font-family: tahoma;
+  font-size: 11px;
+  color: #6C7E6C;
+  margin-top: 5px;
+  padding-bottom: 3px;
+}
+
+#user_session_remember_me {
+  margin-right: 4px !important;
+}
+
+/***end main page***/
+/********************************************menu index***/
+
+#menus-list li{
+  margin: 15px;
+  background: #ECF0EC;
+  border: 1px solid #D9DFD9;
+  padding: 5px;
+}
+#menus-list li span {
+  line-height: 25px;
+}
+#button_shift {
+  float: right;
+}
+/***end menu index***/
+/********************************************Your profile***/
+
+#your_profile strong {
+  display: block;
+  padding: 10px;
+  background: #E6ECE6;
+  width: 520px;
+  margin: auto;
+}
+#your_profile div {
+  border: 1px solid #E6ECE6;
+  margin: auto;
+  padding: 10px;
+  width: 520px;
+  margin-bottom: 15px;
+}
+#your_profile {
+  margin-top: 20px;
+  color: #283227;
+  font-family: tahoma;
+  font-size: 12px;
+}
+#your_profile p {
+  padding: 0px;
+}
+#your_profile a img {
+  float: right;
+  margin-right: 47px;
+}
+/***end your profile***/

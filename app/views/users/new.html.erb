@@ -1,8 +1,9 @@
-<h1>Register</h1>
+<% title '<img src="/images/title_register.png" alt="" />' %>
  
-<% form_for @user, :url => account_path do |f| %>
+<% form_for @user, :html => { :class => 'form_style' }, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= f.hidden_field :invitation_token %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Register" %>
+    <p class="submit_button_style">
+  <%= image_submit_tag("/images/button_submit_long.jpg") %>
 <% end %>
