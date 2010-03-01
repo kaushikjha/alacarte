@@ -30,7 +30,8 @@ class CategoriesController < ApplicationController
         format.html { redirect_to(@menu) }
         format.xml  { render :xml => @menu, :status => :created, :location => @category }
       else
-        format.html { render :action => "new" }
+        flash[:error] = 'Categories must have a name'
+        format.html { redirect_to(@menu) }
         format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
       end
     end
