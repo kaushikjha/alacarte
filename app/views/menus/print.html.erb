@@ -5,11 +5,11 @@
 
 <%- @menu.categories.each do |category| -%>
   <h1><%= category.name %></h1>
-  <%= "<h3>#{category.description}</h3>" unless category.description.nil? %>
+  <%= "<h3>#{simple_format(category.description)}</h3>" unless category.description.nil? %>
   <% category.items.each do |item| %>
     <div class="menu_item">
       <h2><%= item.name %></h2>
-      <%= "<h4>#{item.description}</h4>" unless item.description.empty? %>
+      <%= "<h4>#{simple_format(item.description)}</h4>" unless item.description.empty? %>
       <table class="size_holder">
       <%- item.prices.each do |price| -%>
         <tr>
