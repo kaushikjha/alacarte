@@ -28,4 +28,4 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 # ROOT constant for rake invitation:send
-ROOT = '' # TODO Set this constant.
+ROOT = 'http://beta.alacarteapp.com' # TODO Set this constant.
