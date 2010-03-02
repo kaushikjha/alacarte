@@ -6,6 +6,7 @@ class Item < ActiveRecord::Base
   accepts_nested_attributes_for :prices, :reject_if => lambda { |a| a[:price].blank? }, :allow_destroy => true
   
   validates_presence_of :name
+  validates_presence_of :category_id
   
   def validate
     errors.add_to_base("Must have at least one price") unless prices.length > 0

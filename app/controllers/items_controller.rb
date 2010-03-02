@@ -1,10 +1,18 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
+  
   # GET /items/new
   # GET /items/new.xml
   def new
-    @category = Category.find(params[:category_id])
-    @item = @category.items.new
+    @user = current_user
+    if params[:category_id]
+      @category = @user.categories.find(params[:category_id])
+      @menu = @category.menu
+      @item = @category.items.new
+    else
+      @menu = @user.menus.find(params[:menu_id])
+      @item = Item.new
+    end
     if @item.prices.length == 0
       @item.prices.build
     end
@@ -17,20 +25,28 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
-    @item = Item.find(params[:id])
+    @user = current_user
+    @item = @user.items.find(params[:id])
+    @category = @item.category
+    @menu = @category.menu
   end
 
   # POST /items
   # POST /items.xml
   def create
-    @category = Category.find(params[:category_id])
-    @item = @category.items.new(params[:item])
-    @item.user_id = current_user.id
+    @user = current_user
+    @item = Item.new(params[:item])
+    @item.user = @user
+    if !params[:menu_id].blank?
+      @menu = @user.menus.find(params[:menu_id])
+    else
+      @menu = @item.category.menu
+    end
 
     respond_to do |format|
       if @item.save
         flash[:notice] = 'Item was successfully created.'
-        format.html { redirect_to(@category.menu) }
+        format.html { redirect_to(@item.category.menu) }
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else
         format.html { render :action => "new" }

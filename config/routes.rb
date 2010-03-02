@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resource :feedback
 
-  map.resources :menus, :has_many => :categories, :member => { :print => :get }, :collection => { :position => :post }
+  map.resources :menus, :has_many => [:categories, :items], :member => { :print => :get }, :collection => { :position => :post }
   map.resources :categories, :has_many => :items, :collection => { :position => :post }
   map.resources :items, :except => [:index, :show], :collection => { :position => :post }
 

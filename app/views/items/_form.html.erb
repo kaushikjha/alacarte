@@ -1,4 +1,9 @@
 <%= f.error_messages %>
+<input type="hidden" name="menu_id" value="<%= params[:menu_id] %>" id="menu_id">
+<p>
+  <%= f.label :category_id, "Category" %>
+  <%= f.collection_select :category_id, @menu.categories.all, :id, :name, :include_blank => true %>
+</p>
 <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
