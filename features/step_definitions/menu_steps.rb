@@ -4,5 +4,6 @@ Given /^I have no menus$/ do
 end
 
 Given /^I have a menu called "([^\"]*)"$/ do |name|
-  menu = Menu.create(:user_id => current_user.id, :name => name)
+  @user = current_user
+  @menu = @user.menus.create(:name => name)
 end

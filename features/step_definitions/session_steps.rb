@@ -1,8 +1,8 @@
 When /^I sign in as "(.*)\/(.*)"$/ do |email, password|
-  When %{I go to the sign in page}
+  When %{I go to the homepage}
   And %{I fill in "Email" with "#{email}"}
   And %{I fill in "Password" with "#{password}"}
-  And %{I press "Login"}
+  And %{I press "login_button"}
 end
 
 Then /^I should be signed in$/ do
