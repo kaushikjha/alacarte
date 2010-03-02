@@ -4,6 +4,7 @@
   Current Menu: <%= @menu.name %>
   <%= link_to "(edit)", edit_menu_path(@menu) %>
   <%= link_to "(view)", print_menu_path(@menu), :target => "_blank" %>
+  <%= link_to "(add item)", new_menu_item_path(@menu) %>
 </h1>
 <div id="show_container">
   <% if @menu.categories.empty? %>
