@@ -2,6 +2,9 @@
 
 <% form_for([@category, @item], :html => { :class => 'form_style'}) do |f| %>
   <%= render "form", :f => f %>
+  <p style="float: right;">
+    <%= image_submit_tag "/images/button_add_this_item.jpg", :name => "add_another" %>
+  </p>
   <p>
     <%= image_submit_tag "/images/button_add_this_item.jpg", :id => "form_submit" %>
   </p>

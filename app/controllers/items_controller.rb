@@ -46,7 +46,13 @@ class ItemsController < ApplicationController
     respond_to do |format|
       if @item.save
         flash[:notice] = 'Item was successfully created.'
-        format.html { redirect_to(@item.category.menu) }
+        format.html {
+          if params['add_another.x']
+            redirect_to new_category_item_path(@item.category)
+          else
+            redirect_to(@item.category.menu)
+          end
+          }
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else
         format.html { render :action => "new" }
