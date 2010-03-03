@@ -1,0 +1,532 @@
+items_024: 
+  name: The Grotto Boli
+  id: "40"
+  category_id: "4"
+  description: Ham, capicolla, Genoa salami, pepperoni, sweet peppers, onions, and cheese
+  user_id: "1"
+  position: "1"
+items_045: 
+  name: Tuna Sub
+  id: "61"
+  category_id: "8"
+  description: Tuna perfectly blended with mayo, onion, and celery
+  user_id: "1"
+  position: "7"
+items_066: 
+  name: The Meathead
+  id: "82"
+  category_id: "6"
+  description: Pepperoni, bacon, and sausage -- wow!
+  user_id: "1"
+  position: "8"
+items_067: 
+  name: The Classic
+  id: "83"
+  category_id: "6"
+  description: Mushrooms, pepperoni, and onions
+  user_id: "1"
+  position: "9"
+items_025: 
+  name: Philly Steak Boli
+  id: "41"
+  category_id: "4"
+  description: Sirloin steak, cheese, sweet peppers, onions, and mushrooms
+  user_id: "1"
+  position: "2"
+items_046: 
+  name: Eggplant Parmigiana Sub
+  id: "62"
+  category_id: "8"
+  description: Breaded eggplant with cheese and marinara sauce
+  user_id: "1"
+  position: "8"
+items_068: 
+  name: Chicken Wing Pizza
+  id: "84"
+  category_id: "6"
+  description: Cheese and chicken wing sauce (instead of pizza sauce) topped with sliced chicken breast
+  user_id: "1"
+  position: "10"
+items_026: 
+  name: Chicken Philly Steak Boli
+  id: "42"
+  category_id: "4"
+  description: Chicken steak with cheese, peppers, onions, and mushrooms
+  user_id: "1"
+  position: "3"
+items_047: 
+  name: Sausage 'n Pepper Sub
+  id: "63"
+  category_id: "8"
+  description: Italian sausage with sweet peppers & onions topped in sauce
+  user_id: "1"
+  position: "9"
+items_070: 
+  name: BBQ Chicken Pizza
+  id: "86"
+  category_id: "6"
+  description: The legendary taste meets our famous chicken breast with mild BBQ sauce and red onions.  Warning -- very addicting.
+  user_id: "1"
+  position: "12"
+items_069: 
+  name: Pizza Margherita
+  id: "85"
+  category_id: "6"
+  description: An old world Italian favorite -- tomatoes, cheese, spices, olive oil, and garlic
+  user_id: "1"
+  position: "11"
+items_048: 
+  name: Hot Wing Sub
+  id: "64"
+  category_id: "8"
+  description: Chicken tenders with our spicy wing sauce with lettuce & blue cheese
+  user_id: "1"
+  position: "10"
+items_006: 
+  name: Bruschetta
+  id: "12"
+  category_id: "1"
+  description: Tomatoes, fresh basil, roasted garlic and onions, extra virgin olive oil with toasted ciabatta bread
+  user_id: "1"
+  position: "1"
+items_027: 
+  name: Chicken Cordon Boli
+  id: "43"
+  category_id: "4"
+  description: Chicken breast, sliced ham, and cheese-flavored with blue cheese dressing and honey mustard
+  user_id: "1"
+  position: "4"
+items_071: 
+  name: BLT Pizza
+  id: "87"
+  category_id: "6"
+  description: Bacon, lettuce, tomato, and cheese with mayonnaise on the side
+  user_id: "1"
+  position: "13"
+items_007: 
+  name: Breadsticks
+  id: "13"
+  category_id: "1"
+  description: Six fresh-baked breadsticks with garlic butter coating served with marinara sauce
+  user_id: "1"
+  position: "2"
+items_028: 
+  name: Veggie Boli
+  id: "44"
+  category_id: "4"
+  description: Fresh tomatoes, broccoli florets, mushrooms, red onions, black olives, cheese and a blend of spices
+  user_id: "1"
+  position: "5"
+items_050: 
+  name: Italian
+  id: "66"
+  category_id: "9"
+  description: Ham, capicolla, Genoa salami, provolone cheese, lettuce, tomatoes, and more
+  user_id: "1"
+  position: "2"
+items_049: 
+  name: Chicken Caesar
+  id: "65"
+  category_id: "9"
+  description: Zesty Italian chicken breast with romaine, romano cheese, and Caesar dressing
+  user_id: "1"
+  position: "1"
+items_072: 
+  name: Hawaiian Pizza
+  id: "88"
+  category_id: "6"
+  description: The legendary taste with pineapple and ham
+  user_id: "1"
+  position: "14"
+items_008: 
+  name: Garlic Bread
+  id: "14"
+  category_id: "1"
+  description: Fresh baked bread topped with a garlic butter sauce and toasted to a crispy golden brown
+  user_id: "1"
+  position: "3"
+items_030: 
+  name: Eggplant Parmigiana
+  id: "46"
+  category_id: "7"
+  description: Lightly breaded eggplant cutlets deep fried, topped with cheese, covered with marinara sauce and served with a side of spaghetti
+  user_id: "1"
+  position: "1"
+items_029: 
+  name: BYO Boli
+  id: "45"
+  category_id: "4"
+  description: One filling of your choice and cheese, select from our pizza toppings
+  user_id: "1"
+  position: "6"
+items_051: 
+  name: Turkey
+  id: "67"
+  category_id: "9"
+  description: Turkey breast and bacon with lettuce, tomato, and mayonnaise
+  user_id: "1"
+  position: "3"
+items_073: 
+  name: Cheesesteak Pizza
+  id: "89"
+  category_id: "6"
+  description: Sirloin steak, mushrooms, onions, and sweet peppers.  Chicken cheesesteak also available
+  user_id: "1"
+  position: "15"
+items_010: 
+  name: Deep Fried Veggies
+  id: "16"
+  category_id: "1"
+  description: Broccoli, cauliflower, zucchini, and mushrooms with dipping sauce
+  user_id: "1"
+  position: "5"
+items_009: 
+  name: Fried Calamari
+  id: "15"
+  category_id: "1"
+  description: Tender breaded and fried Calamari rings served with marinara sauce
+  user_id: "1"
+  position: "4"
+items_031: 
+  name: Chicken Parmigiana
+  id: "47"
+  category_id: "7"
+  description: Breaded chicken breast baked with marinara sauce, topped with cheddar cheese, served with a side of spaghetti
+  user_id: "1"
+  position: "2"
+items_052: 
+  name: Tuna
+  id: "68"
+  category_id: "9"
+  description: Tuna salad with lettuce
+  user_id: "1"
+  position: "4"
+items_074: 
+  name: Grotto's Sicilian Style Pizza
+  id: "90"
+  category_id: "6"
+  description: thick, tender, and delicious
+  user_id: "1"
+  position: "16"
+items_011: 
+  name: Basket of Steak Fries
+  id: "17"
+  category_id: "1"
+  description: A large basket of our steak fries deep fried to a golden brown
+  user_id: "1"
+  position: "6"
+items_032: 
+  name: Spaghetti
+  id: "48"
+  category_id: "7"
+  description: Our famous spaghetti sauce
+  user_id: "1"
+  position: "3"
+items_053: 
+  name: Grotto Burger with Cheese
+  id: "69"
+  category_id: "10"
+  description: ""
+  user_id: "1"
+  position: "1"
+items_075: 
+  name: Real Aged Dairy Cheese & Sauce
+  id: "91"
+  category_id: "5"
+  description: ""
+  user_id: "1"
+  position: "1"
+items_012: 
+  name: Jalapeno Popper
+  id: "18"
+  category_id: "1"
+  description: Spicy deep fried poppers stuffed with cheddar cheese & diced jalapeno peppers.  Served with salsa on the side
+  user_id: "1"
+  position: "7"
+items_033: 
+  name: Baked Ziti
+  id: "49"
+  category_id: "7"
+  description: Fresh cooked pasta and your choice of Grotto's regular or marinara sauce, covered with cheese
+  user_id: "1"
+  position: "4"
+items_054: 
+  name: Bacon Cheese Burger
+  id: "70"
+  category_id: "10"
+  description: ""
+  user_id: "1"
+  position: "2"
+items_076: 
+  name: Thick Crust
+  id: "92"
+  category_id: "5"
+  description: ""
+  user_id: "1"
+  position: "2"
+items_013: 
+  name: Chicken Tenders
+  id: "19"
+  category_id: "1"
+  description: "Premium breaded white meat chicken tenders surrounded by our signature steak fries.  Choose your dipping sauce: honey-mustard, BBQ, Honey, or any of our wing sauces@"
+  user_id: "1"
+  position: "8"
+items_034: 
+  name: Linguini with Clam Sauce
+  id: "50"
+  category_id: "7"
+  description: You choose--red or white sauce--both equally tempting with plenty of tender clams served over linguini with garlic, pepper, and olive oil
+  user_id: "1"
+  position: "5"
+items_055: 
+  name: The Big Texas Chili Burger
+  id: "71"
+  category_id: "10"
+  description: ""
+  user_id: "1"
+  position: "3"
+items_077: 
+  name: Toppings
+  id: "93"
+  category_id: "5"
+  description: Mushrooms, sausage, pepperoni, anchovies, extra cheese, sweet peppers, bacon, meatballs, black olives, hot peppers, broccoli, low-fat cheese, onion, garlic, jalapenos, pineapple, ham
+  user_id: "1"
+  position: "3"
+items_014: 
+  name: Mozzarella Sticks
+  id: "20"
+  category_id: "1"
+  description: The best Mozzarella sticks around served with marinara sauce
+  user_id: "1"
+  position: "9"
+items_035: 
+  name: Linguini Alfredo
+  id: "51"
+  category_id: "7"
+  description: Linguini served with our Alfredo sauce
+  user_id: "1"
+  position: "6"
+items_056: 
+  name: Mushrooms & Fried Onion Cheeseburger
+  id: "72"
+  category_id: "10"
+  description: ""
+  user_id: "1"
+  position: "4"
+items_078: 
+  name: Cheese Cake
+  id: "94"
+  category_id: "11"
+  description: A traditional New York style creamy cheese cake topped with cherries upon request
+  user_id: "1"
+  position: "1"
+items_015: 
+  name: Fresh Tossed Salad
+  id: "21"
+  category_id: "2"
+  description: ""
+  user_id: "1"
+  position: "1"
+items_036: 
+  name: Lasagna
+  id: "52"
+  category_id: "7"
+  description: Delicious ricotta cheese and tender meat between layers of pasta topped with sauce
+  user_id: "1"
+  position: "7"
+items_057: 
+  name: Italian Chicken Breast
+  id: "73"
+  category_id: "10"
+  description: Marinated Italian chicken breast on a Kaiser roll with lettuce, tomato, and red onion
+  user_id: "1"
+  position: "5"
+items_080: 
+  name: Chocolate Ganache Cheesecake
+  id: "96"
+  category_id: "11"
+  description: Rich cheesecake combined with chocolate and cream atop a dark chocolate graham cracker crust iced with decadent chocolate Ganache glaze
+  user_id: "1"
+  position: "3"
+items_079: 
+  name: Chocolate Cake
+  id: "95"
+  category_id: "11"
+  description: A rich three-layered chocolate cake coated in a devilish chocolate butter cream icing.
+  user_id: "1"
+  position: "2"
+items_037: 
+  name: Cheese Ravioli
+  id: "53"
+  category_id: "7"
+  description: Ravioli filled with sumptuous ricotta cheese and topped with spaghetti sauce -- always a favorite
+  user_id: "1"
+  position: "8"
+items_058: 
+  name: Hot Dog
+  id: "74"
+  category_id: "10"
+  description: Surrounded by steak fries
+  user_id: "1"
+  position: "6"
+items_016: 
+  name: Soup
+  id: "22"
+  category_id: "2"
+  description: ""
+  user_id: "1"
+  position: "1"
+items_081: 
+  name: Reese's Peanut Butter Pie
+  id: "97"
+  category_id: "11"
+  description: Our most popular dessert featuring peanut butter filling and chunks of peanuts trimmed with chocolate
+  user_id: "1"
+  position: "4"
+items_059: 
+  name: The Works
+  id: "75"
+  category_id: "6"
+  description: Pepperoni, mushrooms, sweet peppers, sausage, onion, garlic, and extra cheese
+  user_id: "1"
+  position: "1"
+items_017: 
+  name: Chili
+  id: "23"
+  category_id: "2"
+  description: ""
+  user_id: "1"
+  position: "2"
+items_038: 
+  name: Linguini ala Aglio with Broccoli & Chicken
+  id: "54"
+  category_id: "7"
+  description: Chargrilled Italian marinated chicken breast with fresh sliced garlic, olive oil, broccoli florets, and black pepper tossed with linguini
+  user_id: "1"
+  position: "9"
+items_060: 
+  name: The Grande (A Stuffed Pizza)
+  id: "76"
+  category_id: "6"
+  description: Two layers of dough filled with cheese, sauce, onion, spices, all with just a hint of garlic and the pizza topping of your choice.
+  user_id: "1"
+  position: "2"
+items_018: 
+  name: Chef's Salad
+  id: "24"
+  category_id: "2"
+  description: Ham, sliced turkey breast, hard boiled egg & cheese presented on a bed of mixed salad greens
+  user_id: "1"
+  position: "3"
+items_040: 
+  name: Chicken Parmigiana Sub
+  id: "56"
+  category_id: "8"
+  description: Tender chicken breast breaded with cheese and our marinara sauce
+  user_id: "1"
+  position: "2"
+items_039: 
+  name: Italian Sub
+  id: "55"
+  category_id: "8"
+  description: Ham, capicolla, Genoa salami, provolone cheese, lettuce, tomatoes, and onions with olive oil & vinegar
+  user_id: "1"
+  position: "1"
+items_061: 
+  name: Pizza Bianco
+  id: "77"
+  category_id: "6"
+  description: A white pizza--no tomato sauce, but plenty of cheese, spices, and onions
+  user_id: "1"
+  position: "3"
+items_020: 
+  name: Tuna Bowl
+  id: "26"
+  category_id: "2"
+  description: Tuna salad served on a bed of mixed greens
+  user_id: "1"
+  position: "5"
+items_019: 
+  name: Antipasto
+  id: "25"
+  category_id: "2"
+  description: Ham, Genoa salami, capicola, pepperoni, cherry tomatoes, hard boiled egg, black olives, pepperoncini on a bed of salad greens
+  user_id: "1"
+  position: "4"
+items_041: 
+  name: Philly Style Cheese Steak
+  id: "57"
+  category_id: "8"
+  description: The ultimate cheese steak piled high with mushrooms, onions, and green peppers
+  user_id: "1"
+  position: "3"
+items_062: 
+  name: Bianco Ole (Mexican Style!)
+  id: "78"
+  category_id: "6"
+  description: A Bianco-style pizza made with sliced fresh tomatoes, red onions, and jalapenos
+  user_id: "1"
+  position: "4"
+items_021: 
+  name: Caesar Salad
+  id: "27"
+  category_id: "2"
+  description: Crisp Romaine tossed with Romano cheese and croutons with our Caesar dressing
+  user_id: "1"
+  position: "6"
+items_042: 
+  name: Philly Style Chicken Cheese Steak
+  id: "58"
+  category_id: "8"
+  description: A Grotto Pizza classic -- our tender, premium sliced chicken topped with mushrooms, onions, and green peppers
+  user_id: "1"
+  position: "4"
+items_063: 
+  name: Shrimp Scampi Oreganatto
+  id: "79"
+  category_id: "6"
+  description: A Bianco-style pizza with our regular crust and whole shrimp, fresh garlic, oregano, and olive oil
+  user_id: "1"
+  position: "5"
+items_022: 
+  name: Grilled Chicken Salad
+  id: "28"
+  category_id: "2"
+  description: Charbroiled breast of chicken, served on a bed of mixed greens
+  user_id: "1"
+  position: "7"
+items_043: 
+  name: Turkey Sub
+  id: "59"
+  category_id: "8"
+  description: Oven roasted turkey topped with mayo, lettuce, and tomatoes
+  user_id: "1"
+  position: "5"
+items_064: 
+  name: Veggie Bianco
+  id: "80"
+  category_id: "6"
+  description: A Bianco-style pizza with fresh tomatoes, broccoli florets, mushrooms, red onions, black olives, light extra cheese, olive oil, and a special blend of spices
+  user_id: "1"
+  position: "6"
+items_023: 
+  name: Buffalo-Style Chicken Wings
+  id: "39"
+  category_id: "3"
+  description: Pur wings are also available in plarty platters of 50 or more, please inquire.
+  user_id: "1"
+  position: "1"
+items_044: 
+  name: Meatball Parmigiana Sub
+  id: "60"
+  category_id: "8"
+  description: Hearty meatballs with melted cheese and topped with rich sauce
+  user_id: "1"
+  position: "6"
+items_065: 
+  name: Veggie Russo
+  id: "81"
+  category_id: "6"
+  description: A cheese-less pizza with our pizza sauce, slice fresh tomatoes, broccoli, mushrooms, black olives, red onions, spices, and olive oil
+  user_id: "1"
+  position: "7"
