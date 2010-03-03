@@ -1,0 +1,19 @@
+textarea{
+  overflow: auto;
+}
+select {
+  border: 1px solid #333 !important;
+}
+#menus-list #button_shift {
+  margin-top: -30px;
+  margin-right: 10px;
+}
+.link_move {
+  margin-top: -10px;
+}
+#categories-list h2 {
+  line-height: 20px;
+}
+#category_name {
+  width: 250px !important;
+}

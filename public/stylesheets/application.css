@@ -429,6 +429,10 @@ a:hover {
   display: block;
   width: 450px;
 }
+.form_style select {
+  width: 453px;
+  padding: 5px;
+}
 .description_field, .price_field {
   width: 195px !important;
 }
