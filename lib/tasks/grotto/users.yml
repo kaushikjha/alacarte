@@ -1,5 +1,6 @@
 grotto_user:
-  invitation: grotto_invitation
+  id: "1"
+  invitation_id: <%= ids['grotto_invitation'] %>
   hits: "0"
   crypted_password: 06a343a742ea31fbd005f0ab2cc10a3f4b3dff4044cce3728b830d59396518724ca2f3f9fc8b099b913109ed5cb58f89cb674ea3af4899d915bd4e1bfda7b9b2
   single_access_token: RLMtJnBSM-sZJlV8W1VI
