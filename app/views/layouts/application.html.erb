@@ -4,6 +4,7 @@
   <head>
     <title>Alacarte</title>
     <%= stylesheet_link_tag 'reset', 'application' %>
+    <!--[if IE]><%= stylesheet_link_tag('ie') %><![endif]-->
     <%= javascript 'jquery', 'jquery-ui', 'application' %>
     <%= yield(:head) %>
   </head>
