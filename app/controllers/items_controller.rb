@@ -40,7 +40,8 @@ class ItemsController < ApplicationController
     if !params[:menu_id].blank?
       @menu = @user.menus.find(params[:menu_id])
     else
-      @menu = @item.category.menu
+      @category = @user.categories.find(params[:category_id])
+      @menu = @category.menu
     end
 
     respond_to do |format|
