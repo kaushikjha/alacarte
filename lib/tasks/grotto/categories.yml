@@ -1,93 +1,82 @@
-categories_01: 
+grotto_categories_1: 
   name: Appetizers
-  id: "1"
   description: ""
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "1"
 
-categories_02: 
+grotto_categories_2: 
   name: Soups & Salads
-  id: "2"
   description: "Choice of Hand-Crafted Dressings: Italian, Bleu Cheese, Parmesan Peppercorn, Fat-Free Sun Dried Tomato Vinaigrette, French, Thousand Island, Balsamic Vinaigrette, & Ranch"
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "2"
 
-categories_03: 
+grotto_categories_3: 
   name: Wings
-  id: "3"
   description: Choose your sauce!  BBQ, Mild, Hot, Inferno, Garlic Butter, or Grotto Pizza's Grand Slam Wing Sauce
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "3"
 
-categories_04: 
+grotto_categories_4: 
   name: Grotto Boli
-  id: "4"
   description: Our signature version of the Stromboil - stuffed with your favorite fillings & served with our special boli sauce for dipping
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "4"
 
-categories_05: 
+grotto_categories_5: 
   name: Pizza
-  id: "5"
   description: Our Specialty!  A family recipe since 1953.
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "5"
 
-categories_06: 
+grotto_categories_6: 
   name: Grotto Specialty Pizza
-  id: "6"
   description: 
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "6"
 
-categories_07: 
+grotto_categories_7: 
   name: Pasta
-  id: "7"
   description: |-
     Our pasta entrees are served with tossed salad and breadsticks.  Ask about our whole wheat pasta.
     
     Add meatballs, sausage or mushrooms: $1.00 each
     Add chicken: $2.00 each
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "7"
 
-categories_08: 
+grotto_categories_8: 
   name: Submarines
-  id: "8"
   description: Made with the finest meats and cheese and served with chips.  Steak fries available upon request.
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "8"
 
-categories_09: 
+grotto_categories_9: 
   name: Wraps
-  id: "9"
   description: Four wrapped sandwiches made to order.  Rolled in a honey wheat wrap and served with chips.  Steak fries available upon request.
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "9"
 
-categories_10: 
+grotto_categories_10: 
   name: From Our Charbroiler
-  id: "10"
   description: "Featuring a half-pound 100% Certified Angus Beef Ground Chuck cooked medium to well, served on a kaiser roll with your choice of American, Provolone, or Cheddar cheese served with chips.  Steak fries available upon request.\r\n\
     \r\n\
     Add your choice of extra cheese, sweet peppers, sauteed mushrooms, or fried onions for just 50\xC2\xA2 each."
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "10"
 
-categories_11: 
+grotto_categories_11: 
   name: Sweet Dreams
-  id: "11"
   description: 
-  user_id: "1"
-  menu_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
+  menu_id: "<%= ids['grotto_menu'] %>"
   position: "11"

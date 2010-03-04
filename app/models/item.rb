@@ -8,7 +8,7 @@ class Item < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :category_id
   
-  def validate
-    errors.add_to_base("Must have at least one price") unless prices.length > 0
-  end
+  # def validate
+  #   errors.add_to_base("Must have at least one price") unless prices.length > 0
+  # end
 end

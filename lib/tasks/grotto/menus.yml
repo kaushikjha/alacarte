@@ -1,6 +1,5 @@
-menu: 
+grotto_menu: 
   name: Delivery
-  id: "1"
   description: ""
-  user_id: "1"
+  user_id: "<%= ids['grotto_user'] %>"
   position: "1"

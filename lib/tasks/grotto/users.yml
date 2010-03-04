@@ -1,11 +1,7 @@
 grotto_user:
-  id: "1"
-  invitation_id: <%= ids['grotto_invitation'] %>
+  invitation_id: "<%= ids['grotto_invitation'] %>"
   hits: "0"
-  crypted_password: 06a343a742ea31fbd005f0ab2cc10a3f4b3dff4044cce3728b830d59396518724ca2f3f9fc8b099b913109ed5cb58f89cb674ea3af4899d915bd4e1bfda7b9b2
-  single_access_token: RLMtJnBSM-sZJlV8W1VI
-  perishable_token: 97CwKQsMXYDQozKoljZW
-  password_salt: LEnUDnnu069DBYPThsOM
-  persistence_token: a612f9c19c183c6fceb37823372210015b8e35f4bd620d3ed89b6e8767c9d55c0cf9783bcbdccf0e5b548a99024595a4a38c0a35b83005638519f124a072e328
+  password: psswd123
+  password_confirmation: psswd123
   email: grotto@example.com
   rate_limit: "200"
