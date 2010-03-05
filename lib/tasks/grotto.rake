@@ -2,9 +2,10 @@ require 'yaml'
 
 namespace :db do
   desc "Set up example account (Grotto)"
-  task :grotto => :environment do
-    if User.find_by_email("grotto@example.com") || Invitation.find_by_recipient_email("grotto@example.com")
-      puts "You already have an account/invitation for 'grotto@example.com'"
+  task :grotto, :email, :needs => :environment do |email, args|
+    args.with_defaults(:email => "grotto@example.com")
+    if User.find_by_email(args[:email]) || Invitation.find_by_recipient_email(args[:email])
+      puts "You already have an account/invitation for '#{args[:email]}'"
     else
       TABLES = %w-invitations users menus categories items prices-
       ids = {}
