@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
   validates_presence_of :invitation_id, :message => 'is required'
   validates_uniqueness_of :invitation_id
+  validates_presence_of :restaurant_name
   
   def invitation_token
     invitation.token if invitation

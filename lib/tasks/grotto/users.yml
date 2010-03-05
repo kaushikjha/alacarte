@@ -5,3 +5,4 @@ grotto_user:
   password_confirmation: psswd123
   email: <%= args[:email] %>
   rate_limit: "200"
+  restaurant_name: Grotto Pizza

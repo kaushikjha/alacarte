@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224214123) do
+ActiveRecord::Schema.define(:version => 20100305165923) do
 
   create_table "categories", :force => true do |t|
     t.integer  "user_id"
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(:version => 20100224214123) do
     t.integer  "invitation_id"
     t.integer  "hits",                :default => 0
     t.integer  "rate_limit",          :default => 200
+    t.string   "restaurant_name"
   end
 
 end

@@ -1,6 +1,9 @@
 <%= form.label :email %>
 <%= form.text_field :email %>
 <br />
+<%= form.label :restaurant_name, 'Restaurant Name' %>
+<%= form.text_field :restaurant_name %>
+<br />
 <%= form.label :password, form.object.new_record? ? nil : "Change password" %>
 <%= form.password_field :password %>
 <br />
