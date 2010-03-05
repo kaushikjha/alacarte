@@ -17,7 +17,7 @@ namespace :db do
         data = YAML.load(ERB.new(File.read(path)).result binding)
         data.each do |key, value|
           model_instance = model_class.create(value)
-          model_instance.errors.each { |attr, msg| puts "#{attr} - #{msg}" } unless model_instance.save
+          model_instance.errors.each { |attr, msg| puts "#{attr} - #{msg}" } unless model_instance.save(false)
           # model_instance.save
           ids[key] = model_instance.id
         end
