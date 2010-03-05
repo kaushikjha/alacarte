@@ -1,2 +1,2 @@
 grotto_invitation:
-  recipient_email: grotto@example.com
+  recipient_email: <%= args[:email] %>
