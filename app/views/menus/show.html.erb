@@ -11,7 +11,10 @@
     <div id="categories-list">To get started, please add a category below.</div>
   <% else %>
     <div id="categories-list">
-      <% @menu.categories.each do |category| %>
+      <p id="categories-links">
+        <%= @names.join(' | ') %>
+      </p>
+      <% @categories.each do |category| %>
         <%= render "shared/category", :category => category %>
       <% end %>
     </div>

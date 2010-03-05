@@ -26,6 +26,9 @@ class MenusController < ApplicationController
   def show
     @user = current_user
     @menu = @user.menus.find(params[:id])
+    @categories = @menu.categories
+    @names = []
+    @categories.map { |c| @names << "<a href='##{c.name.parameterize}'>#{c.name}</a>" }
 
     respond_to do |format|
       format.html # show.html.erb

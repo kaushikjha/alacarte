@@ -176,6 +176,9 @@ a {
 a:hover {
   color: #96AF96;
 }
+h2 a, h2 a:hover {
+  color: #000;
+}
 /***end header***/
 
 
@@ -374,6 +377,11 @@ a:hover {
   font-size: 12px;
   font-family: tahoma, trebuchet, verdana, sans-serif;
   margin: 10px 0;
+}
+#categories-links {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
 }
 /********************************************some reusable styles***/
 .h_pretty {

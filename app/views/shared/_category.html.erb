@@ -1,5 +1,5 @@
 <div class="category_sections" id="category_<%= category.id -%>">
-  <h2><%= category.name %></h2>
+  <h2><a name="<%= category.name.parameterize %>"><%= category.name %></a></h2>
   <div class="category_buttons">
     <p><%= link_to '<img src="/images/button_add_item.jpg" alt="add item" title="add item to ' + category.name + '" />', new_category_item_path(category) %></p>
     <p><%= link_to '<img src="/images/button_edit.jpg" alt="edit" title="edit ' + category.name + '" />', edit_category_path(category) %></p>
