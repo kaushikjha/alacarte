@@ -13,8 +13,9 @@
       <table class="size_holder">
       <%- item.prices.each do |price| -%>
         <tr>
-          <td class="item_size"><%= "#{price.description}: " unless price.description.blank? %></td>
-          <td class="item_price"><%= number_to_currency(price.price) %></td>
+          <td class="item_size"><div class="left"><%= "#{price.description}: " unless price.description.blank? %></div></td>
+          <td class="item_price"><div class="right"><%= number_to_currency(price.price) %></div></td>
+          <div style="clear: both"></div>
         </tr>
       <%- end -%>
       </table>

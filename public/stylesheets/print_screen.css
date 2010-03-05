@@ -8,7 +8,8 @@ label {
   width: 150px;
 }
 body {
-  width: 100%;
+  width: 900px;
+  margin: auto;
   font-family: verdana, helvetica, sans-serif;
   line-height: 20px;
 }

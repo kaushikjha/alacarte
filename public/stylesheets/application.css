@@ -319,6 +319,12 @@ h2 a, h2 a:hover {
   margin: 5px 0;
   padding: 10px;
 }
+.category_sections2 {
+  background: #F7F9F7;
+  border: 1px solid #E2E9E2;
+  margin: 5px 0;
+  padding: 10px;
+}
 .category_buttons {
   float: right;
 }
