@@ -378,10 +378,26 @@ h2 a, h2 a:hover {
   font-family: tahoma, trebuchet, verdana, sans-serif;
   margin: 10px 0;
 }
-#categories-links {
-  width: 75%;
+#categories-links span{
+  width: 78%;
   margin: 0 auto;
   text-align: center;
+  display: block;
+}
+#categories-links a {
+  text-decoration: none;
+}
+#categories-links {
+  position: relative;
+}
+#categories-links img {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+.back_to_top {
+  font-size: 11px;
+  float: right;
 }
 /********************************************some reusable styles***/
 .h_pretty {

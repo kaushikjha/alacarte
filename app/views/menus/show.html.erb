@@ -11,8 +11,9 @@
     <div id="categories-list">To get started, please add a category below.</div>
   <% else %>
     <div id="categories-list">
-      <p id="categories-links">
-        <%= @names.join(' | ') %>
+      <p id="categories-links" class="category_sections">
+        <img src="/images/label_jump_to.png" alt="Jump To" />
+        <span><%= @names.join(' | ') %></span>
       </p>
       <% @categories.each do |category| %>
         <%= render "shared/category", :category => category %>
