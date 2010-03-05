@@ -1,6 +1,6 @@
 Given /^I am signed up with "(.*)\/(.*)"$/ do |email, password|
   invitation = Invitation.create!(:recipient_email => email)
-  user = User.create!(:invitation_id => invitation.id, :email => email, :password => password, :password_confirmation => password)
+  user = User.create!(:invitation_id => invitation.id, :email => email, :password => password, :password_confirmation => password, :restaurant_name => "Testaurant")
 end
 
 Given /^I am signed up with and signed in as "(.*)\/(.*)"$/ do |email, password|
