@@ -1,0 +1,7 @@
+grotto_user:
+  invitation_id: "<%= ids['grotto_invitation'] %>"
+  hits: "0"
+  password: psswd123
+  password_confirmation: psswd123
+  email: grotto@example.com
+  rate_limit: "200"

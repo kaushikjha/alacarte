@@ -1,0 +1,5 @@
+grotto_menu: 
+  name: Delivery
+  description: ""
+  user_id: "<%= ids['grotto_user'] %>"
+  position: "1"
