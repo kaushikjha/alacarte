@@ -8,3 +8,5 @@ test/*
 webrat-*.html
 Thumbs.db
 rerun.txt
+Capfile
+config/deploy.rb
