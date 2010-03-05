@@ -1,12 +1,12 @@
 class User < ActiveRecord::Base
   acts_as_authentic
   
-  has_many :menus
-  has_many :categories
-  has_many :items
-  has_many :prices
+  has_many :menus, :dependent => :destroy
+  has_many :categories, :dependent => :destroy
+  has_many :items, :dependent => :destroy
+  has_many :prices, :dependent => :destroy
   
-  belongs_to :invitation
+  belongs_to :invitation, :dependent => :destroy
   
   validates_uniqueness_of :email
   validates_presence_of :invitation_id, :message => 'is required'
