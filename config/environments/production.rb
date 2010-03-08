@@ -27,5 +27,7 @@ config.action_view.cache_template_loading            = true
 # Enable threaded mode
 # config.threadsafe!
 
+config.action_mailer.delivery_method = :postmark
+
 # ROOT constant for rake invitation:send
 ROOT = 'http://beta.alacarteapp.com' # TODO Set this constant.

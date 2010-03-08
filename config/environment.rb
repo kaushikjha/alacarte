@@ -11,6 +11,11 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "cancan"
   config.gem 'hoptoad_notifier'
+  config.gem 'postmark-rails'
+  
+  require 'postmark-rails'
+  
+  config.action_mailer.postmark_api_key = "POSTMARK_API_KEY"
 
   config.time_zone = 'UTC'
 end
