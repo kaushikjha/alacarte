@@ -70,6 +70,11 @@ a {
   list-style: disc;
 }
 
+.copyright {
+  padding: 5px;
+  text-align: center;
+}
+
 
 /******************* From Alacarte PHP Development *******************/
 p {
